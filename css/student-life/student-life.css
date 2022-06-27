@@ -35,17 +35,8 @@
 }
 
 /*--------------End-Mouse--------------*/
-.student-life {
-  padding: 5%;
-  background: var(--bg-sl);
-}
-
-#sl-dev-web {
+.hide {
   display: none;
-}
-
-#sl-dev-web:target {
-  display: block;
 }
 
 /*-------------------------------------------Header-----------------------------------------------------*/
@@ -225,6 +216,14 @@ header img {
   transition: 0.5s;
 }
 
+.header-links .fi-rr-cross-small {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
+
 .header-links a:active {
   color: red;
 }
@@ -249,6 +248,11 @@ header img {
 
 /*header Links onclick----------------------------------------------------------------*/
 /*section-student-life----------------------------------------------------------------*/
+.student-life {
+  padding: 5%;
+  background: var(--bg-sl);
+}
+
 .student-life > h2 {
   margin: auto;
   padding-top: 5%;
@@ -313,14 +317,20 @@ header img {
 
 .nv1-circle::after {
   content: "Iniciante";
+  position: absolute;
+  top: 130%;
 }
 
 .nv2-circle::after {
   content: "Junior";
+  position: absolute;
+  top: 130%;
 }
 
 .nv3-circle::after {
   content: "Senior";
+  position: absolute;
+  top: 130%;
 }
 
 .bar {
@@ -349,7 +359,7 @@ header img {
   background: var(--primary-strong);
 }
 
-#pro:checked ~ .n2-bar, #pro:checked ~ .n1-bar {
+#pro:checked ~ :is(.n2-bar, .n1-bar) {
   background: var(--primary-strong);
 }
 
@@ -369,6 +379,10 @@ header img {
   pointer-events: none;
   scroll-margin: 350px;
   background: linear-gradient(to bottom, var(--primary-strong), var(--primary-strong2));
+}
+
+.sl-card i {
+  font-size: 4vw;
 }
 
 /*---Cards-text---*/

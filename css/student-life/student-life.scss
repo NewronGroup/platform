@@ -31,12 +31,13 @@
 }
 
 /*--------------End-Mouse--------------*/
-.student-life{
-    padding: 5%;
-    background: var(--bg-sl);
+
+//Default
+.hide{
+    display: none;
 }
-#sl-dev-web{display: none;}
-#sl-dev-web:target{display: block;}
+//Default
+
 /*-------------------------------------------Header-----------------------------------------------------*/
 header{
     background: var(--background-dark) linear-gradient( to bottom, #030616, #091241);
@@ -156,7 +157,13 @@ header img{
     font-size: .9rem;color: #121212;
     transition: .5s;
 }
-
+.header-links .fi-rr-cross-small{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size: 2.5vw;
+    cursor: pointer;
+}
 .header-links a:active{
     color: red;
 }
@@ -183,6 +190,11 @@ header img{
 // .header-areas button:nth-child(6):focus ~ .header-links:nth-of-type(6){height: auto;padding:1% 3rem;gap: 2rem;}
 // .header-areas button:nth-child(7):focus ~ .header-links:nth-of-type(7){height: auto;padding:1% 3rem;gap: 2rem;}
 /*section-student-life----------------------------------------------------------------*/
+.student-life{
+    padding: 5%;
+    background: var(--bg-sl);
+}
+
 .student-life > h2{
     margin: auto;padding-top: 5%;
     display: flex;justify-content: center;align-items: center;
@@ -232,9 +244,9 @@ header img{
     font-family: 'poppins';
 }
 
-.nv1-circle::after{content: 'Iniciante';}
-.nv2-circle::after{content: 'Junior';}
-.nv3-circle::after{content: 'Senior';}
+.nv1-circle::after{content: 'Iniciante';position: absolute;top: 130%;}
+.nv2-circle::after{content: 'Junior';position: absolute;top: 130%;}
+.nv3-circle::after{content: 'Senior';position: absolute;top: 130%;}
 
 .bar{
     background: white;
@@ -259,7 +271,7 @@ header img{
 #int:checked ~ .n1-bar{
     background: var(--primary-strong);
 }
-#pro:checked ~ .n2-bar, #pro:checked ~ .n1-bar{
+#pro:checked ~ :is(.n2-bar, .n1-bar) {
     background: var(--primary-strong);
 }
 
@@ -275,6 +287,10 @@ header img{
     opacity:0;pointer-events: none;
     scroll-margin: 350px;
     background:linear-gradient(to bottom,var(--primary-strong),var(--primary-strong2));
+}
+
+.sl-card i{
+    font-size: 4vw;
 }
 
 /*---Cards-text---*/
@@ -323,3 +339,4 @@ header img{
 @media (max-width:800px){
     .mouse{display: none;}
 }
+
