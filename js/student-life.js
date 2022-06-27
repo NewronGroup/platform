@@ -25,13 +25,7 @@ search_button.onclick = ()=>{
 }
 /*End-Search-bar*/
 
-
-
-
-
-
-
-
+// Switch Text
 
 let time = 8000,
     currentImageIndex = 0,
@@ -71,7 +65,12 @@ const mouse = document.querySelector('.mouse')
  mouse.style.top = position.pageY + 'px';
 })
 
-/*------------------------------------------------------------------------------------------------------------------------*/ 
+/*---------Close-Header-Links---------------------------------------------------------------------------------------------------------------*/ 
+
+function links_close(){
+    const close_links = document.querySelector(".header-links .fi-rr-cross-small")
+    history.go(-1)
+}
 
 /*Card-Selector*/
 const beg = document.querySelector('#beg')
@@ -81,24 +80,26 @@ const pro = document.querySelector('#pro')
 
 function beginner() 
 { 
-    window.location.href = "http://127.0.0.1:5501/html/student-life.html#beginner"; 
+    window.location.href = "http://127.0.0.1:5500/html/student-life.html#beginner"; 
     beg.checked="checked"
 }
 function intermediate() 
 { 
-    window.location.href = "http://127.0.0.1:5501/html/student-life.html#intermediate"; 
+    window.location.href = "http://127.0.0.1:5500/html/student-life.html#intermediate"; 
     int.checked="checked"
 }
 function profissional() 
 { 
-    window.location.href = "http://127.0.0.1:5501/html/student-life.html#profissional"; 
+    window.location.href = "http://127.0.0.1:5500/html/student-life.html#profissional"; 
     pro.checked="checked"
 }
-
-
-
-
-
 /*End-Card-Selector*/
 
 /*------------------------------------------------------------------------------------------------------------------------*/ 
+const sl_default = document.querySelector('#sl-default')
+const sl_dev_web = document.querySelector('#sl-dev-web')
+function show_dev_web()
+{
+    sl_default.classList.add('hide')
+    sl_dev_web.classList.remove('hide')
+}
