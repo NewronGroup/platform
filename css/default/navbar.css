@@ -22,7 +22,12 @@
   z-index: 7;
   color: white;
 }
-
+.menu a{
+  color: white;
+}
+.menu a:before{
+  display: none;
+}
 .menu:hover {
   text-shadow: 0 0 10px white;
 }

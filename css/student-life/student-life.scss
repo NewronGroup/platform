@@ -194,7 +194,27 @@ header img{
     padding: 5%;
     background: var(--bg-sl);
 }
+.student-life h3{
+    text-align:center;
+}
+.student-life p{
+    position: relative;
+    width: fit-content;
+}
 
+.fi-rr-caret-up{
+    position: absolute;
+    right: -20px;
+    animation: up-variant .5s 5 alternate ease-in-out;
+}
+@keyframes up-variant{
+    from{
+        transform: translateY(4px);
+    }
+    to{
+        transform: translateY(-2px);
+    }
+}
 .student-life > h2{
     margin: auto;padding-top: 5%;
     display: flex;justify-content: center;align-items: center;

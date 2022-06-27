@@ -253,6 +253,41 @@ header img {
   background: var(--bg-sl);
 }
 
+.student-life h3 {
+  text-align: center;
+}
+
+.student-life p {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.fi-rr-caret-up {
+  position: absolute;
+  right: -20px;
+  -webkit-animation: up-variant 0.5s 5 alternate ease-in-out;
+          animation: up-variant 0.5s 5 alternate ease-in-out;
+}
+
+@-webkit-keyframes up-variant {
+  from {
+    transform: translateY(4px);
+  }
+  to {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes up-variant {
+  from {
+    transform: translateY(4px);
+  }
+  to {
+    transform: translateY(-2px);
+  }
+}
 .student-life > h2 {
   margin: auto;
   padding-top: 5%;

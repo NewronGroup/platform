@@ -24,24 +24,17 @@
                <i class="fi fi-rr-cross"></i>
             </button>
             <ul class="mobile-menu-total hide">
-               <li class="mobile-menu">Profissionais
-                  <ul class="mobile-submenu">
-                     <li>Próximas Reuniões</li>
-                     <!--<li>Converse com eles</li>-->
-                  </ul>
+               <li class="mobile-menu">
+                  <a href="student-life.html">Student Life</a>
                </li>
-               <li class="mobile-menu">Student Life
+               <li class="mobile-menu">Conexões
                   <ul class="mobile-submenu">
-                     <li>Cursos</li>
-                     <li>Faculdades</li>
-                     <li>Trilhas Profissionais</li>
+                     <li>Instituições</li>
+                     <li>Empresas</li>
                   </ul>
                </li>
                <li class="mobile-menu">Comunidade
                   <ul class="mobile-submenu">
-                     <li>Instituições</li>
-                     <li>Empresas</li>
-                     <li>Dicas</li>
                      <li>Principais Dúvidas</li>
                   </ul>
                </li>
@@ -52,23 +45,17 @@
                <a href="../html/index.html"><img src="../assets/logo/low-quality-logo.png" alt="logo"></a>
             </div>
             <ul class="menu-area">
-               <li class="menu">Profissionais
-                  <ul class="submenu">
-                     <li>Próximas reuniões</li>
-                     <li>Fale com Eles</li>
-                  </ul>
+               <li class="menu">
+                  <a href="student-life.html">Student Life</a>
                </li>
-               <li class="menu">Student Life
-                  <ul class="submenu">
-                     <li>Trilhas Profissionais</li>
-                     <li>Faculdades</li>
-                  </ul>
-               </li>
-
-               <li class="menu">Comunidade
+               <li class="menu">Conexões
                   <ul class="submenu">
                      <li>Instituições</li>
                      <li>Empresas</li>
+                  </ul>
+               </li>
+               <li class="menu">Comunidade
+                  <ul class="submenu">
                      <li>Dicas</li>
                      <li>Principais Dúvidas</li>
                   </ul>
@@ -91,7 +78,7 @@
          <input type="submit" id="send-search" value="">
       </form>
    </section>
-
+   <script src="../js/navbar.js"></script>
    <!-------End Navbar------->
    <header>
       <div class="header-text">
@@ -109,7 +96,7 @@
       <button><a href="#sl-4">Ciências Sociais e Humanas</a></button>
       <button><a href="#sl-5">Comunicação e Informação</a></button>
       <button><a href="#sl-6">Saúde e Bem-Estar</a></button>
-<!--------Links-of-areas-------->
+      <!--------Links-of-areas-------->
       <div class="header-links" id="sl-1">
          <i i class="fi-rr-cross-small" onclick="links_close()"></i>
          <div>
@@ -180,12 +167,9 @@
             <a href="">Ensino</a>
             <a href="">Expressão Corporal</a>
             <a href="">Produção</a>
-
-
-
          </div>
       </div>
-      <div class="header-links"id="sl-2">
+      <div class="header-links" id="sl-2">
          <i i class="fi-rr-cross-small" onclick="links_close()"></i>
          <div>
             <h3>Desenvolvedor <p>Front-End</p>
@@ -228,7 +212,7 @@
             <a href="">Matemática Computacional</a>
          </div>
       </div>
-      <div class="header-links"id="sl-3">
+      <div class="header-links" id="sl-3">
          <i i class="fi-rr-cross-small" onclick="links_close()"></i>
          <div>
             <h3>Agroecologia</h3>
@@ -274,7 +258,7 @@
             <a href="">Saúde Pública Veterinária</a>
          </div>
       </div>
-      <div class="header-links"id="sl-4">
+      <div class="header-links" id="sl-4">
          <i i class="fi-rr-cross-small" onclick="links_close()"></i>
          <div>
             <h3>Relações Internacionais</h3>
@@ -313,7 +297,7 @@
             <a href="">Orientação</a>
          </div>
       </div>
-      <div class="header-links"id="sl-5">
+      <div class="header-links" id="sl-5">
          <i i class="fi-rr-cross-small" onclick="links_close()"></i>
          <div>
             <h3>Cinema e Audiovisual</h3>
@@ -351,8 +335,8 @@
             <a href="">Gestão de Conteúdo</a>
          </div>
       </div>
-      <div class="header-links"id="sl-6">
-         <i i class="fi-rr-cross-small" onclick="links_close()"></i>         
+      <div class="header-links" id="sl-6">
+         <i i class="fi-rr-cross-small" onclick="links_close()"></i>
          <div>
             <h3>Biomedicina</h3>
             <a href="">Acupuntura</a>
@@ -407,24 +391,31 @@
       </div>
    </div>
    <section class="student-life" id="sl-default">
-      <h2> Desenvolvedor Web</h2>
-      <p style="margin:auto; text-align:center;">Em qual nível você está?</p>
+      <h3>Expanda seu conhecimento explorando novos assuntos no Student Life.</h3>
+      <br>
+      <p> Aqui você consegue visualizar os temas, os tipos de atuação e características de cada área profissional. No
+         Student Life
+         você será direcionado a tomar as melhores decisões para o seu futuro e de acordo com seus gostos e
+         perspectivas.<br></p>
+         
+
+      <p style="margin:auto; text-align:center;">Escolha sua trilha acima <i class="fi fi-rr-caret-up"></i></p>
    </section>
    <section class="student-life hide" id="sl-dev-web">
       <h2> Desenvolvedor Web</h2>
       <p style="margin:auto; text-align:center;">Em qual nível você está?</p>
       <div class="progress-bar">
-            
+
          <input type="radio" name="hide" id="beg">
-            <input type="radio" name="hide" id="int">
-            <input type="radio" name="hide" id="pro">
-            
-            <button class="circle nv1-circle" onclick="beginner()"></button>
-            <div class="bar n1-bar"></div>
-            <button class="circle nv2-circle" onclick="intermediate()"></button>
-            <div class="bar n2-bar"></div>
-            <button class="circle nv3-circle" onclick="profissional()"></button>
-         </div>
+         <input type="radio" name="hide" id="int">
+         <input type="radio" name="hide" id="pro">
+
+         <button class="circle nv1-circle" onclick="beginner()"></button>
+         <div class="bar n1-bar"></div>
+         <button class="circle nv2-circle" onclick="intermediate()"></button>
+         <div class="bar n2-bar"></div>
+         <button class="circle nv3-circle" onclick="profissional()"></button>
+      </div>
       </div>
 
       <div class="sl-card" id="beginner">
@@ -432,7 +423,7 @@
          <div class="text">
             <h3>Iniciante</h3>
             <p>
-               <li>Lógica da programação</li>
+               <li>Lógica da Programação</li>
                <li>HTML/CSS</li>
                <li>Introdução ao Python</li>
                <li>Inglês</li>
@@ -444,10 +435,10 @@
       <div class="sl-card" id="intermediate">
          <img src="../assets/logo/shiba 2.png" alt="">
          <div class="text">
-            <h3>Desenvolvedor Junior</h3>
+            <h3>Desenvolvedor Júnior</h3>
             <p>
-               <li>Foque em aprender uma linguagem e o dominio</li>
-               <li>Banco de dados - PHP / MySQL</li>
+               <li>Foque em aprender uma Linguagem e o Domínio</li>
+               <li>Banco de Dados - PHP/MySQL</li>
                <li>Bibliotecas</li>
                <li>Inglês </li>
             </p>
@@ -457,12 +448,12 @@
       <div class="sl-card" id="profissional">
          <img src="../assets/logo/shiba 3.png" alt="">
          <div class="text">
-            <h3>Programador Senior</h3>
+            <h3>Programador Sênior</h3>
             <p>
-               <li>especialização em uma linguagem</li>
+               <li>Especialização em uma Linguagem</li>
                <li>Linguagens diversas</li>
                <li>Networking</li>
-               <li>Ajuda a comunidade</li>
+               <li>Ajude a Comunidade</li>
             </p>
             <a href="#"><i class="fi fi-rr-cross-small"></i></a>
          </div>
@@ -500,15 +491,14 @@
          </div>
          <div class="footer-media">
             <a href="#"><i class="fi fi-brands-facebook"></i></a>
-            <a href="#"><i class="fi fi-brands-twitter"></i></a>
             <a href="https://www.instagram.com/newronn_"><i class="fi fi-brands-instagram"></i></a>
-            <!--<a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-telegram-plane"></i></a>-->
+            <a href="https://www.linkedin.com/in/newron-suporte-b71759243/#experience"><i
+                  class="fi fi-brands-linkedin"></i></a>
          </div>
          <div class="footer-line"></div>
          <div class="end">
             <p class="par-m">Encontre seu Caminho com</p>
-            <!--#top-return--><a href="../html/thanks-page.html"><img src="../assets/logo/logo.png" alt="logo"></a>
+            <!--#top-return--><a href="#"><img src="../assets/logo/logo.png" alt="logo"></a>
             <p class="par-m">Newron</p>
          </div>
       </section>
