@@ -267,13 +267,13 @@ header img {
 .fi-rr-caret-up {
   position: absolute;
   right: -20px;
-  -webkit-animation: up-variant 0.5s 5 alternate ease-in-out;
-          animation: up-variant 0.5s 5 alternate ease-in-out;
+  -webkit-animation: up-variant 0.5s 6 alternate ease-in-out forwards;
+          animation: up-variant 0.5s 6 alternate ease-in-out forwards;
 }
 
 @-webkit-keyframes up-variant {
   from {
-    transform: translateY(4px);
+    transform: translateY(8px);
   }
   to {
     transform: translateY(-2px);
@@ -282,7 +282,7 @@ header img {
 
 @keyframes up-variant {
   from {
-    transform: translateY(4px);
+    transform: translateY(8px);
   }
   to {
     transform: translateY(-2px);
@@ -357,13 +357,13 @@ header img {
 }
 
 .nv2-circle::after {
-  content: "Junior";
+  content: "Intermediário";
   position: absolute;
   top: 130%;
 }
 
 .nv3-circle::after {
-  content: "Senior";
+  content: "Avançado";
   position: absolute;
   top: 130%;
 }
