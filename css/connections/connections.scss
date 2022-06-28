@@ -16,13 +16,28 @@
     --sl-font-size:clamp(1rem, .8vw + .5rem, 3rem);
     --header-btn-hover:#363636;
     --animation-pure-white:white;
-
     --primary-strong2:#00614c;
+
+    /*------navbar------*/
+    --text-color:black;
 }
 /*--------------Variables--------------*/
 
-
+body{
+    
+    background: var(background-light);
+}
 main{
     min-height: 100vh;
-    background: #363636;
+    margin: 10vh 5% 0 5%;
+    border: 1px solid;
+}
+
+section > div{
+    display: flex;
+    border: 1px dotted;
+}
+
+section > div i{
+    font-size: 18vw;
 }
