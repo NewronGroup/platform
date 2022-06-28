@@ -29,7 +29,6 @@
     box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.2);
     pointer-events: none;
 }
-
 /*--------------End-Mouse--------------*/
 
 //Default
@@ -194,7 +193,27 @@ header img{
     padding: 5%;
     background: var(--bg-sl);
 }
+.student-life h3{
+    text-align:center;
+}
+.student-life p{
+    position: relative;
+    width: fit-content;
+}
 
+.fi-rr-caret-up{
+    position: absolute;
+    right: -20px;
+    animation: up-variant .5s 6 alternate ease-in-out forwards;
+}
+@keyframes up-variant{
+    from{
+        transform: translateY(8px);
+    }
+    to{
+        transform: translateY(-2px);
+    }
+}
 .student-life > h2{
     margin: auto;padding-top: 5%;
     display: flex;justify-content: center;align-items: center;
@@ -245,8 +264,8 @@ header img{
 }
 
 .nv1-circle::after{content: 'Iniciante';position: absolute;top: 130%;}
-.nv2-circle::after{content: 'Junior';position: absolute;top: 130%;}
-.nv3-circle::after{content: 'Senior';position: absolute;top: 130%;}
+.nv2-circle::after{content: 'Intermediário';position: absolute;top: 130%;}
+.nv3-circle::after{content: 'Avançado';position: absolute;top: 130%;}
 
 .bar{
     background: white;
