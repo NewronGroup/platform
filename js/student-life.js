@@ -51,36 +51,36 @@ const int = document.querySelector('#int')
 const pro = document.querySelector('#pro')
 
 
+ function beginner() 
+ { 
+     window.location.href = "http://127.0.0.1:5500/html/student-life.html#beginner";    
+     beg.checked="checked"
+ }
+ function intermediate() 
+ { 
+     window.location.href = "http://127.0.0.1:5500/html/student-life.html#intermediate"; 
+     int.checked="checked"
+ }
+ function profissional() 
+ { 
+     window.location.href = "http://127.0.0.1:5500/html/student-life.html#profissional"; 
+     pro.checked="checked"
+ }
 // function beginner() 
 // { 
-//     window.location.href = "http://127.0.0.1:5500/html/student-life.html#beginner"; 
-//     beg.checked="checked"
+//     window.location.href = "https://newron.com.br.s3.br-sao.cloud-object-storage.appdomain.cloud//platform-main/html/student-life.html#beginner";
+//     beg.checked="checked";
 // }
 // function intermediate() 
 // { 
-//     window.location.href = "http://127.0.0.1:5500/html/student-life.html#intermediate"; 
-//     int.checked="checked"
+//     window.location.href = "https://newron.com.br.s3.br-sao.cloud-object-storage.appdomain.cloud//platform-main/html/student-life.html#intermediate";
+//     int.checked="checked";
 // }
 // function profissional() 
 // { 
-//     window.location.href = "http://127.0.0.1:5500/html/student-life.html#profissional"; 
-//     pro.checked="checked"
+//     window.location.href = "https://newron.com.br.s3.br-sao.cloud-object-storage.appdomain.cloud//platform-main/html/student-life.html#profissional";
+//     pro.checked="checked";
 // }
-function beginner() 
-{ 
-    window.location.href = "https://newron.com.br.s3.br-sao.cloud-object-storage.appdomain.cloud//platform-main/html/student-life.html#beginner";
-    beg.checked="checked";
-}
-function intermediate() 
-{ 
-    window.location.href = "https://newron.com.br.s3.br-sao.cloud-object-storage.appdomain.cloud//platform-main/html/student-life.html#intermediate";
-    int.checked="checked";
-}
-function profissional() 
-{ 
-    window.location.href = "https://newron.com.br.s3.br-sao.cloud-object-storage.appdomain.cloud//platform-main/html/student-life.html#profissional";
-    pro.checked="checked";
-}
 /*------------------------------------------------------------------------------------------------------------------------*/ 
 const sl_default = document.querySelector('#sl-default')
 const sl_dev_web = document.querySelector('#sl-dev-web')

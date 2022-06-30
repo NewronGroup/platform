@@ -33,6 +33,7 @@
 }
 
 body {
+  position: relative;
   width:clamp(500px,100vw,100vw) ;
   overflow-x: hidden;
   background: var(--background-light);
@@ -52,7 +53,28 @@ body {
   background-color: #2BC4A2;
   border-radius: 3px;
 }
+/*---------------------------Preloader---------------------------*/
+.loader{
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: black;
+  z-index:100000000000;
+}
 
+.loader-active{
+  animation: loader-out 1s forwards;
+}
+
+@keyframes loader-out{
+  to{
+    opacity: 0;
+    visibility: 0;
+  }
+
+}
 /*---------------------------Vertical-Line---------------------------*/
 .ver-line {
   width: 1px;

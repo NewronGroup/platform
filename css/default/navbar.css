@@ -492,6 +492,12 @@ ul, li {
           animation: return .3s ease-in-out;
 }
 
+@media (prefers-color-scheme:light){
+    :root{
+      /*------navbar------*/
+      --text-color:#121212;
+    }
+}
 
 @media (max-width:1000px){
   .menu{

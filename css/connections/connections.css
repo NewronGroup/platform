@@ -23,20 +23,57 @@
 
 /*--------------Variables--------------*/
 body {
-  background: var(background-light);
+  background: var(--background-light);
+  color: var(--sl-text-light1);
 }
 
 main {
   min-height: 100vh;
   margin: 10vh 5% 0 5%;
-  border: 1px solid;
 }
 
-section > div {
+section.header {
+  text-align: center;
+  margin: 5%;
+}
+
+.business {
+  margin-bottom: 2%;
+}
+
+.business article {
+  background: hotpink;
+  width: 50%;
   display: flex;
-  border: 1px dotted;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-section > div i {
+.business article :is(li, p) {
+  border: 1px double;
+}
+
+.business > div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: lime;
+  border: 1px dotted;
+  overflow: hidden;
+  border: 1px solid red;
+}
+
+.business > div i {
   font-size: 18vw;
+  width: 50%;
+  text-align: center;
+  line-height: 100%;
+  transform: translateY(10%);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--background-dark);
+  }
 }/*# sourceMappingURL=connections.css.map */
