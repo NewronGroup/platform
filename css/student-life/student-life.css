@@ -46,7 +46,7 @@ header {
   align-items: center;
   justify-content: center;
   height: 49vh;
-  width: 100%;
+  width: 100vw;
   gap: 5%;
   padding: 0 10%;
   -webkit-animation: city_lights 4s alternate infinite;

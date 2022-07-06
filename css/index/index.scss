@@ -17,9 +17,7 @@ header{
     color: white;
 }
 
-    main{padding: 2%; margin: 0;}
-
-
+main{padding: 2%; margin: 0;}
 /*Atractive-------------------------------------------------------------------------------------------------*/
 .atractive{
     display: flex;
@@ -252,11 +250,15 @@ header{
     font-weight: 400;
     font-size: clamp(1.8rem,3vw,5rem);
 }
-
 .final-main-text a{
-    font-size: clamp(2rem,4vw,5rem);color: black;
+    position: relative;font-size: clamp(2rem,4vw,5rem);color: black;
 }
-
+.final-main-text a:before{
+    transition: .8s;
+}
+.final-main-text a:hover{
+    color: black;
+}
 
 /*-------Ads-------*/
 .top-return{

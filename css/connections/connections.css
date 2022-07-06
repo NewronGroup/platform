@@ -18,25 +18,62 @@
   --animation-pure-white:white;
   --primary-strong2:#00614c;
   /*------navbar------*/
-  --text-color:black;
 }
 
-/*--------------Variables--------------*/
-body {
-  background: var(background-light);
+/*--------------Prefer colors--------------*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--background-dark);
+    color: var(--sl-text-light1);
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color:black;
+  }
+
+  body {
+    background: var(--background-light);
+    color: var(--sl-text-dark1);
+  }
+}
+/*--------------code--------------*/
+.navbar {
+  position: relative;
 }
 
 main {
   min-height: 100vh;
-  margin: 10vh 5% 0 5%;
-  border: 1px solid;
+  margin: 5%;
 }
 
-section > div {
+.header {
+  text-align: center;
+}
+
+.section-business {
+  width: 100%;
+  border: 2px dotted;
+}
+
+.section-business .card {
   display: flex;
-  border: 1px dotted;
+  justify-content: center;
+  align-items: center;
 }
 
-section > div i {
-  font-size: 18vw;
+.section-business .card img {
+  width: 50%;
+}
+
+.section-business .card-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-business .card-text * {
+  color: rebeccapurple;
 }/*# sourceMappingURL=connections.css.map */
