@@ -318,7 +318,16 @@ main {
 }
 
 .final-main-text a {
+  position: relative;
   font-size: clamp(2rem, 4vw, 5rem);
+  color: black;
+}
+
+.final-main-text a:before {
+  transition: 0.8s;
+}
+
+.final-main-text a:hover {
   color: black;
 }
 

@@ -18,52 +18,56 @@
     --animation-pure-white:white;
     --primary-strong2:#00614c;
     /*------navbar------*/
-    --text-color:black;
+    
 }
-/*--------------Variables--------------*/
-
-body{   
-    background: var(--background-light);
-    color: var(--sl-text-light1);
-}
-main{
-    min-height: 100vh;
-    margin: 10vh 5% 0 5%;
-}
-
-section.header{
-    text-align: center;
-    margin: 5%;
-}
-.business{
-    margin-bottom: 2%;
-}
-.business article{
-    background: hotpink;
-    width: 50%;
-    display:flex;flex-direction: column; align-items: center;justify-content: center;
-}
-.business article :is(li, p){
-    border: 1px double;
-}
-.business > div{
-    display: flex; justify-content: center;
-    width: 100%;
-    background: lime;
-    border: 1px dotted;
-    overflow: hidden;
-    border:1px solid red;
-}
-
-.business > div i{
-    font-size: 18vw;
-    width: 50%;
-   text-align: center;
-   line-height: 100%;
-   transform: translateY(10%);
-}
-
+/*--------------Prefer colors--------------*/
 @media (prefers-color-scheme:dark){
     body{
-        background: var(--background-dark);}
+        background: var(--background-dark);
+        color: var(--sl-text-light1);
+    }
+}
+@media (prefers-color-scheme:light){
+    :root{
+        --text-color:black;
+    }
+    body{   
+        background: var(--background-light);
+        color: var(--sl-text-dark1);
+    }
+}
+/*--------------code--------------*/
+.navbar{
+    position: relative;
+}
+
+main{
+    min-height: 100vh;
+    margin: 5%;
+}
+
+.header{
+    text-align: center;
+}
+
+.section-business{
+width: 100%;
+border:  2px dotted;
+}
+
+.section-business .card{
+    display: flex;justify-content: center;align-items: center;
+}
+
+.section-business .card img{
+    width: 50%;
+}
+.section-business .card-text{
+    width: 50%;
+    display: flex;flex-direction: column;align-items: center;justify-content: center;
+    
+}
+
+.section-business .card-text * {
+    color: rebeccapurple;
 }
