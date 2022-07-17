@@ -16,31 +16,6 @@ navbar = new Vue({
    },
    methods: {
 
-      //  const btn_mobile = document.querySelector('#nav_mobile_menu')
-      // const mobile_menu = document.querySelector('.hide')
-      // const btn_menu = document.querySelector('.fi-rr-menu-burger')
-      // const btn_exit = document.querySelector('.fi-rr-cross')
-
-      // const search_button = document.querySelector('.fi-rr-search')
-      // const search_window = document.querySelector('.section-search')
-
-      // btn_menu(){
-      //     mobile_menu.classList.toggle("hide"),
-      //     btn_exit.style.display ="block"
-      //     btn_menu.style.display ="none"
-      // }
-
-      // btn_exit.onclick = ()=>{
-      //     mobile_menu.classList.toggle("hide"),
-      //     btn_exit.style.display ="none"
-      //     btn_menu.style.display ="block"
-      // }
-
-      // search_button.onclick = ()=>{
-      //     search_window.classList.toggle('hide')
-
-      // }
-
    },
    template:
 `
@@ -74,32 +49,45 @@ navbar = new Vue({
             </div>
          </div>
       </div>
+      <div class="nav-components-mobile">
+         <div class="nav-left">
+            <div class="nav-logo">
+               <a href="index.html"><img src="../src/logo/logo-no-details.png" alt="logo"></a>
+            </div>
+         </div>
+         <div class="nav-mobile-right">
+            <i class="fi fi-rr-menu-burger" v-if="mobile_menu_switch" @click="mobile_menu_switch=false"></i>
+            <i class="fi fi-rr-cross" v-else @click="mobile_menu_switch=true"></i>
+         </div>
+      </div>
    </section>
-   <!-- <section class="navbar-mobile">
-      <aside class="navbar-right">
-         <div class="exit-button"><span class="icon-exit"></span></div>
+   <section class="navbar-mobile"v-if="mobile_menu_switch==false">
+      <aside class="mobile-menu">
+         <div class="exit-button" @click="mobile_menu_switch=true"><i class="fi fi-rr-cross-circle"></i></div>
          <div class="login">
             <div class="nav-user" v-if="user_online==false">
-               <a href="sign_in.html" class="login">{{user_name}}</a>
+               <a href="sign_-in.html" class="login">Entrar / Cadastrar-se</a>
             </div>
             <div class="nav-user" v-else>
-               <img v-bind:src="user_image" alt="" srcset="">
-               <a href="sign_in.html" class="login">{{user_name}}</a>
+               
+               <a href="sign-in.html" class="login"><img v-bind:src="user_image" alt="">{{user_name}}</a>
             </div>
          </div>
+         <hr>
          <div class="search">
-            <i class="fi fi-rr-search" @click=""></i>
+            <a href=""><i class="fi fi-rr-search" @click=""></i>&nbsp;&nbsp;Pesquisar</a> 
          </div>
+         <hr>
          <div class="nav-links">
-            <a href="about_us.html">{{navbar_title_1}}</a>
+            <a href="about-us.html">{{navbar_title_1}}</a>
             <a href="connections.html">{{navbar_title_2}}</a>
-            <li class="menu">{{navbar_dropdown_title_1}}
-               <li class="submenu"><a href="not-ready.html">Fórum</a></li>
+            <li>{{navbar_dropdown_title_1}}<i class="fi fi-rr-angle-small-down"></i>
+               <li><a href="not-ready.html">Fórum</a></li>
             </li>
          </div>
       </aside>
    </section>
-   
+   <!--
    <div class="nav-mobile">
       <button id="nav_mobile_menu">
          <i class="fi fi-rr-menu-burger" v-if="mobile_menu_switch" @click="mobile_menu_switch=false"></i>
