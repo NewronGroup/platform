@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Conexões - Newron</title>
    <!-------CSS------->
-   <link rel="stylesheet" href="../style/connections.css">
+   <link rel="stylesheet" href="../style/partners.css">
    <!-------Logo Icon------->
    <link rel="icon" href="../src/logo/logo_inverted_no_content.png" type="image/icon type">
    <!-------CSS Icons------->

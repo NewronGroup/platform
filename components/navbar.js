@@ -10,8 +10,8 @@ navbar = new Vue({
 
          mobile_menu_switch: false,
          user_name:'Entrar',
-         user_image:'../src/user_provided/no_image.jpg',
          user_online:true,
+         class_of_navbar_search_field:'navbar-search-field',
 
 
       }
@@ -25,10 +25,13 @@ navbar = new Vue({
          this.mobile_menu_switch=false
          /*Add class switch to soft fade in out*/
       },
-      aoba(){
-         return{
-            <?php echo('Boa noite meu patrão')
-            ?>
+      show_search_field(){
+         
+         if(this.class_of_navbar_search_field=('navbar-search-field')){
+            this.class_of_navbar_search_field=('navbar-search-field--active')
+         }
+         if(this.class_of_navbar_search_field=('navbar-search-field--active')){
+            this.class_of_navbar_search_field=('navbar-search-field')
          }
       },
    },
@@ -53,13 +56,13 @@ navbar = new Vue({
          </div>
 
          <div class="nav-right">
-            <i class="fi fi-rr-search" @click=""></i>
+            <input type="search" name="navbar-search" v-bind:id="class_of_navbar_search_field">
+            <i class="fi fi-rr-search" @click="show_search_field()"></i>
             <div class="ver-line"></div>
             <div class="nav-user" v-if="user_online==false">
-               <a href="sign-in.php" class="login">{{user_name}}</a>
+               <a href="sign-in.php" class="login"></a>
             </div>
             <div class="nav-user" v-if="user_online==true">
-               <img v-bind:src="user_image" alt="Foto do Usuário">
                <a href="sign-in.php" class="login_link">{{user_name}}</a>
             </div>
          </div>

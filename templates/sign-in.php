@@ -15,11 +15,12 @@ session_start();
     <!-------Logo title------->
     <title>Login - Newron</title>
     <link rel="icon" href="../src/logo/logo_inverted_no_content.png" type="image/icon type">
+     <!-------CSS Icons------->
+   <link href="../src/icons/uicons-regular-rounded/css/uicons-regular-rounded.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="loader"></div>
-    <script src="../script/preloader.js"></script>
+    <div class="loader"><img src="../src/logo/logo_inverted_no_content.png" alt=""></div><script src="../script/preloader.js"></script>
     <main>
         <section class="login-area">
             <div class="texto">
@@ -28,12 +29,14 @@ session_start();
 
             <div class="inputs">
                 <form method="post">
-
-                    <input type="text" name="login" placeholder="Login" required>
-                    <input type="password" name="senha" placeholder="senha" required>
-                    <input type="submit" name="entrar" value="entrar" id="entrar">
-                    <div class="sign-up"><a href="sign-up.php">Cadastre-se</a></div>
-
+                    <div id="data-input">
+                        <input type="text" name="login" placeholder="Login" required>
+                        <input type="password" name="senha" placeholder="Senha" required>
+                    </div>
+                    <div class="form-buttons">
+                        <input type="submit" name="entrar" value="entrar" id="entrar">
+                        <div class="sign-up"><a href="sign-up.php">Cadastre-se</a></div>
+                    </div>
                 </form>
                 <?php
 
@@ -60,7 +63,7 @@ session_start();
                         $_SESSION['login'] = $login;
                         $_SESSION['senha']   = $senha;
                         //$_SESSION['login'] = $_POST['login'];
-                         header('Location: index.php ');
+                         header('Location: ../user/index.php ');
                     } else {
                         echo '<div class="alert alert-danger"> *Usuario ou senha invalida<br> </div>';
                     }

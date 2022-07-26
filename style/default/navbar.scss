@@ -60,7 +60,7 @@
 	cursor: pointer;
 	transition: all .3s;
 }
-/*-----Links-Decoration-----*/
+/*-----Links-decoration-----*/
 .navbar-top .nav-links :is(a,ul):hover{color: var(--primary-low);}
 .navbar-top .nav-links :is(a):hover{text-shadow: 0 0 20px var(--primary-low);}
 .navbar-top .nav-links :is(ul):hover{background: rgba(0, 0, 0, 0.1);border:1px solid;border-bottom:none;transition: all 1s;}
@@ -87,14 +87,54 @@
 	height: 100%;
 }
 /*-----Search Icon-----*/
-.navbar-top .nav-right i{cursor: pointer;color: var(--text-color);}
+.navbar-top .nav-right i{cursor: pointer;color: var(--text-color);z-index: 10;}
+/*-----Search Field-----*/
+#navbar-search-field{
+	width:0;height: 0;padding-left:0;display: none;
+}
+#navbar-search-field--active{
+	display: block;
+	height: 50%;
+	background: #414241;
+	color: var(--text-color);
+	z-index: 0;
+	border: none;
+	border-bottom: 1px solid;
+	outline-offset: 2px;
+	padding-left: 2%;
+	margin-right: -22px;
+	animation: go-show 1.5s forwards;
+}
+@keyframes go-show{
+	from{width:0;}
+	to{width: 17rem;}
+}
 /*-------Nav-User------*/
-.navbar-top .nav-user{display: flex;gap: 10px;}
+.navbar-top .nav-user{position: relative;}
+.navbar-top .nav-user p{color: var(--text-color);cursor: pointer;}
 
-.navbar-top .nav-user a{color: var(--text-color);}
-.navbar-top .nav-user a:hover{color: var(--primary-low);}
-.navbar-top .nav-user img{height: 3vh;border-radius: 50%;}
 
+
+.dropdow-user{
+	display: none;
+	position: absolute;
+	top: 100%;right: 2%;
+	max-width: 30vw;
+	padding: 2%;
+	background: rgba(255, 255, 255, 0.1);
+}
+
+.show{
+	display: block;
+}
+
+.dropdow-user > *{
+	display: block;
+	color:var(--text-color)
+}
+.dropdow-user > *:hover{
+	color: var(--primary-low);
+}
 
 /*Nav-Mobile---------------------------------------------------------------*/
 .nav-components-mobile{

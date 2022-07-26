@@ -8,8 +8,22 @@ body{
     background-color: rgba(0, 0, 6, 0.900);
     width: 100%;height: 100%; overflow: hidden;
 }
-
-
+button.return-last-page{
+    position: absolute;
+    top:15px;left: 15px;
+    font-size: 2rem;
+    z-index: 2;
+    color: var(--background-light);
+    transition: transform .8s;
+    cursor: pointer;
+    background: transparent;
+}
+button.return-last-page:hover{animation: soft-movimet 2s infinite alternate cubic-bezier(0.68, -0.6, 0.32, 1.6)}
+@keyframes soft-movimet{
+    50%{transform: translateX(20px);}
+    100%{transform: translateX(0);}
+}
+/*---------details---------*/
 .bg-details{
     position: absolute;
     height: 25rem;width: 25rem;border-radius: 50%;
@@ -115,7 +129,19 @@ input:focus{
 }
 .sign-up:hover{background:var(--primary-strong);}
 .sign-up:hover > a{color: white;}
-/*---final-Section-Links---*/
+
+
+
+.alert{
+    background: transparent;
+    margin: 15px 0; 
+}
+.alert-success{
+    color: var(--primary-color);
+}.alert-danger{
+    color: var(red);
+}
+/*---Section-Links---*/
 .suporte {
     display: flex;justify-content: space-between;
     width: 100%;

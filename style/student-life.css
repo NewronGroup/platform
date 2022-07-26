@@ -39,6 +39,10 @@
   display: none;
 }
 
+body {
+  background: tomato;
+}
+
 /*-------------------------------------------Header-----------------------------------------------------*/
 header {
   background: var(--background-dark) linear-gradient(to bottom, #030616, #091241);
@@ -283,7 +287,7 @@ header img {
 }
 
 /*inputs*/
-#beg, #int, #pro {
+.beg, .int, .pro {
   position: absolute;
   opacity: 0;
   pointer-events: none;
@@ -331,13 +335,13 @@ header img {
 }
 
 .nv2-circle::after {
-  content: "Junior";
+  content: "Intermediário";
   position: absolute;
   top: 130%;
 }
 
 .nv3-circle::after {
-  content: "Senior";
+  content: "Avançado";
   position: absolute;
   top: 130%;
 }
@@ -351,15 +355,15 @@ header img {
 }
 
 /*circle-mark*/
-#beg:checked ~ .nv1-circle::before {
+.beg:checked ~ .nv1-circle::before {
   background-color: var(--primary-strong);
 }
 
-#int:checked ~ .nv2-circle::before {
+.int:checked ~ .nv2-circle::before {
   background-color: var(--primary-strong);
 }
 
-#pro:checked ~ .nv3-circle::before {
+.pro:checked ~ .nv3-circle::before {
   background-color: var(--primary-strong);
 }
 

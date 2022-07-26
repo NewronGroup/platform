@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós - Newron</title>
     <!-------CSS------->
-    <link rel="stylesheet" href="../style/about_us.css">
+    <link rel="stylesheet" href="../style/about-us.css">
     <!-------Logo Icon------->
     <link rel="icon" href="../src/logo/logo_inverted_no_content.png" type="image/icon type">
     <!-------CSS Icons------->
@@ -43,6 +43,9 @@
             se manter livre de custos para o usuario final enquanto oferecemos um bom planejamento de carreira é nosso primeiro e mais importante objetivo da Newron.</p>
       </section>
    </main>
-</body>
 
+   <!-------Footer------->
+   <footer></footer><script src="../components/footer.js"></script>
+   <!-------End Footer------->
+</body>
 </html>
