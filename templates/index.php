@@ -2,13 +2,14 @@
 include_once 'db_engine/bd_mysql_pdo.php';
 ?>
 
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Newron - Guiando o seu Futuro</title>
-   
+
    <!-------CSS------->
    <link rel="stylesheet" href="../style/index.css">
    <!-------Logo Icon------->
@@ -18,17 +19,20 @@ include_once 'db_engine/bd_mysql_pdo.php';
    <link href="../src/icons/uicons-brands/css/uicons-brands.css" rel="stylesheet">
    <!-----Vue Framework----->
    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-   
+   <!----Scroll Animation--->
+   <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
-   <div class="loader"><img src="../src/logo/logo_inverted_no_content.png" alt=""></div><script src="../script/preloader.js"></script>
+   <div class="loader"><img src="../src/logo/logo_inverted_no_content.png" alt=""></div>
+   <script src="../script/preloader.js"></script>
    <!-------Top-Return------->
    <span id="top-return" style="position:absolute;"></span>
    <!-------Navbar------->
-   <div class="navbar"></div> <script src="../components/navbar.js"></script>
+   <div class="navbar"></div>
+   <script src="../components/navbar.js"></script>
    <!-----End-Navbar----->
-   
+
    <header>
       <section class="atractive">
          <div class="ver-line-bold"></div>
@@ -43,7 +47,9 @@ include_once 'db_engine/bd_mysql_pdo.php';
 
 
    <!-------Ads------->
-   <a href="#top-return"><div class="top-return"></div></a>
+   <a href="#top-return">
+      <div class="top-return"></div>
+   </a>
    <!-------Ads------->
 
    <main>
@@ -57,14 +63,14 @@ include_once 'db_engine/bd_mysql_pdo.php';
             <a href="student-life.php">Comece sua Jornada</a>
          </div>
       </section>
-      
+
       <section class="student-life">
          <img src="../src/logo/shiba/shiba_3.png" alt="Ícone nível máximo - Student Life">
          <div class="student-life-text">
             <h2 class="title-gg">Student life</h2>
             <p>Trilhe uma jornada de conhecimento com o nosso Student Life, e tenha um cronograma imersivo para alcançar
                seus objetivos profissionais.</p>
-               <a href="db_engine/bd_mysql_destroy_pdo.php">Comece sua Jornada</a>
+            <a href="db_engine/bd_mysql_destroy_pdo.php">Comece sua Jornada</a>
          </div>
       </section>
 
@@ -95,7 +101,7 @@ include_once 'db_engine/bd_mysql_pdo.php';
          </div>
       </section>
       <section class="final-main-text">
-         <div>   
+         <div>
             <h4 class="title-m">Precisa de um Plano?</h4>
             <a class="title link" href="student-life.php">Vamos Trabalhar Juntos →</a>
          </div>
@@ -103,8 +109,10 @@ include_once 'db_engine/bd_mysql_pdo.php';
    </main>
    <!-------End Main------->
    <!-------Footer------->
-   <footer></footer><script src="../components/footer.js"></script>
-   <!-------End Footer------->
+   <footer></footer>
+   <script src="../components/footer.js"></script>
+   <!----Scroll Animation--->
+   <script src="../script/index.js"></script>
 </body>
 
 </html>

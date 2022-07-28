@@ -39,10 +39,6 @@
   display: none;
 }
 
-body {
-  background: tomato;
-}
-
 /*-------------------------------------------Header-----------------------------------------------------*/
 header {
   background: var(--background-dark) linear-gradient(to bottom, #030616, #091241);

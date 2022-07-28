@@ -8,6 +8,11 @@
   --search-text-color: white;
 }
 
+/*----------Scroll-animation----------*/
+.atractive, .student-life, .advantages div, .final-main-text {
+  visibility: hidden;
+}
+
 /*@media (prefers-color-scheme:dark){
   *  body{
         background: var(--background-dark);

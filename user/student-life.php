@@ -59,7 +59,7 @@
 
          <div>
             <h3>Design</h3>
-            <a href="">Animação</a>
+            <a href="#" onclick="show_animator()">Animação</a>
             <a href="">Desenho Industrial</a>
             <a href="">Design Digital</a>
             <a href="">Design de Embalagens</a>
@@ -402,6 +402,104 @@
             <a href="#"><i class="fi fi-rr-cross-small"></i></a>
          </div>
       </div>
+   </section>
+   <section class="student-life hide" id="sl-anim">
+      <h2> Animação</h2>
+      <p style="margin:auto; text-align:center;">Em qual nível você está?</p>
+      <div class="progress-bar">
+
+         <input type="radio" name="hide" class="beg">
+         <input type="radio" name="hide" class="int">
+         <input type="radio" name="hide" class="pro">
+
+         <button class="circle nv1-circle" onclick="beginner_animator()"></button>
+         <div class="bar n1-bar"></div>
+         <button class="circle nv2-circle" onclick="intermediate_animator()"></button>
+         <div class="bar n2-bar"></div>
+         <button class="circle nv3-circle" onclick="profissional_animator()"></button>
+      </div>
+      </div>
+
+      <div class="sl-card" id="beginner_animator">
+         <img src="../src/logo/shiba/shiba_1.png" alt="">
+         <div class="text">
+            <h3>Animador Iniciante</h3>
+            <p>
+               <li>Lógica da Programação</li>
+               <li>HTML/CSS</li>
+               <li>Introdução ao Python</li>
+               <li>Inglês</li>
+
+            </p>
+            <a href="#"><i class="fi fi-rr-cross-small"></i></a>
+         </div>
+      </div>
+      <div class="sl-card" id="intermediate_animator">
+         <img src="../src/logo/shiba/shiba_2.png" alt="">
+         <div class="text">
+            <h3>Desenvolvedor Intermediário</h3>
+            <p>
+               <li>Foque em aprender uma Linguagem e o Domínio</li>
+               <li>Banco de Dados - PHP/MySQL</li>
+               <li>Bibliotecas</li>
+               <li>Inglês </li>
+            </p>
+            <a href="#"><i class="fi fi-rr-cross-small"></i></a>
+         </div>
+      </div>
+      <div class="sl-card" id="profissional_animator"> 
+         <img src="../src/logo/shiba/shiba_3.png" alt="">
+         <div class="text">
+            <h3>Desenvolvedor Avançado</h3>
+            <p>
+               <li>Especialização em uma Linguagem</li>
+               <li>Linguagens diversas</li>
+               <li>Networking</li>
+               <li>Ajude a Comunidade</li>
+            </p>
+            <a href="#"><i class="fi fi-rr-cross-small"></i></a>
+         </div>
+      </div>
+      <section>
+         <br>
+         <br>
+      <h2>CONHEÇA OS 12 PRINCÍPIOS DA ANIMAÇÃO</h2>
+      <br>
+      <div>
+         <h3>1. Comprimir e esticar (Squash and Stretch)</h3>
+         Sem dúvida, este é o conceito mais importante. Qualquer figura viva demonstra mudanças consideráveis na sua forma ao se deslocar durante uma ação.
+         O rosto de um personagem ganha mais vida quando as formas dos olhos, bochechas e lábios mudam de forma, com a utilização do “Squash & Stretch” ( comprime e estica ).
+         Ao se usar o “Squash & Stretch”, é importante sempre manter o volume da forma.
+         <br><img src="../src/student-life/student-life-animation/squash.png">
+         <br><h3>2. Antecipação (Anticipation)</h3>
+         Quando as pessoas estão assistindo a um desenho, elas não entenderão o que está ocorrendo se não houver uma sequência de ações que levem claramente de uma atividade a outra. As pessoas devem ser preparadas para o próximo movimento e esperá-lo antes que este ocorra. Deve ocorrer uma antecipação. Como na vida real, poucos movimentos ocorrem sem antecipação. Sem ela, os movimentos não teriam força. Pense em um tenista, jogador de basebol, basquete ou futebol, todos antecipam o movimento em direção oposta antes de dar a tacada, o chute, etc.
+         <br>
+         <br><h3>3. Encenação (Staging)</h3>
+         Este princípio está baseado em apresentar uma ação de forma que fique claro visualmente para o espectador.
+         Uma ação tem bom “Staging” quando a expressão é bem vista, o movimento é claro e visível.
+         Quando você está fazendo o “Staging” de uma ação deve ter cuidado para não usar um ângulo que atrapalhe o que você quer mostrar.
+         Uma boa forma de conseguir um bom “staging” é através do uso de silhueta.
+         <br>
+         <br><h3>4. Animação direta e pose a pose (Straight Ahead Action and Pose to Pose)</h3>
+         Há dois métodos para animar uma cena, o “direto” (straight ahead) e o “pose a pose”. 
+         No método “direto” o animador desenha um movimento após o outro até o final da cena. Neste caso, a animação sai mais espontânea e a cena parece menos mecânica. Desta forma o animador não planeja exatamente como vai ser o decorrer da cena e vai inventando à medida em que progride. Este método geralmente é usado em cenas de ação, onde muitas vezes ocorrem movimentos rápidos e inesperados, embora seja preciso cuidado para que o personagem não fique fora da perspectiva ou checagem do cenário.
+         <br>
+         <br><h3>5. Continuidade e sobreposição da ação (Overlapping Action and Follow Through)</h3>
+         Quando um personagem entrava andando em cena e de repente parava completamente, a ação parecia dura e não era convincente. Foi encontrada então uma forma em que, basicamente, as partes não parassem de se movimentar todas ao mesmo tempo.
+         É o principio do “Follow Through” (movimento sequencial).
+         Se o personagem tem elementos como orelhas grandes, cauda ou casaco, estas partes continuam a se mover mesmo após a figura ter parado.
+         O movimento de cada elemento terá um tempo diferente de acordo com seu peso e características.
+         <br>
+         <br><h3>6. Aceleração e desaceleração (Slow In and Slow Out)</h3>
+         Uma vez que o animador desenhava cuidadosamente seus extremos, pensando no tempo decorrente da ação como um todo, precisava indicar ao intervalador como seriam feitos os intervalos. Usava então uma “chave de intervalação”.
+         Uma vez que o animador desenhava cuidadosamente seus extremos, pensando no tempo decorrente da ação como um todo, precisava indicar ao intervalador como seriam feitos os intervalos. Usava então uma “chave de intervalação”.
+         Através de indicações na “chave” o movimento se desenhava ao longo da animação.
+         Colocando os intervalos perto dos extremos se consegue um resultado interessante, com o personagem indo rapidamente de uma pose à outra.
+
+
+      </div>
+
+      </section>
    </section>
 
    <!-------Footer------->

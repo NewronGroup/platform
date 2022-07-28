@@ -170,9 +170,15 @@
 	filter: invert(1);
 	cursor: pointer;
 }
-.navbar-mobile .login{
+
+.navbar-mobile .profile-settings{position: absolute;bottom: 2%;right: 6%;text-align: end;}
+.navbar-mobile .profile-settings a{display: flex;align-items: center; justify-content: flex-end; color: var(--text-color);gap: 10px;}
+.navbar-mobile .profile-settings a:not(:last-child){margin-bottom: 5%;}
+.navbar-mobile .profile-settings a:hover{color: var(--primary-low);}
+
+.navbar-mobile .nav-user{margin-bottom: 15px;}
+.navbar-mobile .nav-user p{
 	color: var(--text-color);
-	line-height: 300%;
 	display: flex;align-items: center;
 }
 .navbar-mobile .login img{

@@ -10,7 +10,6 @@ navbar = new Vue({
 
          mobile_menu_switch: false,
          user_name:'Entrar',
-         user_online:true,
          class_of_navbar_search_field:'navbar-search-field',
 
 
@@ -59,11 +58,8 @@ navbar = new Vue({
             <input type="search" name="navbar-search" v-bind:id="class_of_navbar_search_field">
             <i class="fi fi-rr-search" @click="show_search_field()"></i>
             <div class="ver-line"></div>
-            <div class="nav-user" v-if="user_online==false">
-               <a href="sign-in.php" class="login"></a>
-            </div>
-            <div class="nav-user" v-if="user_online==true">
-               <a href="sign-in.php" class="login_link">{{user_name}}</a>
+            <div class="nav-user" >
+               <a href="sign-in.php" class="login">Entrar</a>
             </div>
          </div>
       </div>
@@ -83,12 +79,8 @@ navbar = new Vue({
       <aside class="mobile-menu">
          <div class="exit-button" @click="mobile_menu_switch=false"><i class="fi fi-rr-cross-circle"></i></div>
          <div class="login">
-            <div class="nav-user" v-if="user_online==false">
+            <div class="nav-user">
                <a href="sign-in.php" class="login">Entrar / Cadastrar-se</a>
-            </div>
-            <div class="nav-user" v-else>
-               
-               <a href="sign-in.php" class="login"><img v-bind:src="user_image" alt="">{{user_name}}</a>
             </div>
          </div>
          <hr>
@@ -105,7 +97,7 @@ navbar = new Vue({
          </div>
       </aside>
    </section>
-   
+</section>
 
 `
 })
