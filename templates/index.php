@@ -47,7 +47,7 @@ include_once 'db_engine/bd_mysql_pdo.php';
 
 
    <!-------Ads------->
-   <a href="#top-return">
+   <a href="#top-return" target="_self">
       <div class="top-return"></div>
    </a>
    <!-------Ads------->

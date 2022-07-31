@@ -59,8 +59,12 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
             </div>
 
             <div class="nav-right">
-               <input type="search" name="navbar-search" v-bind:id="class_of_navbar_search_field">
-               <i class="fi fi-rr-search" @click="show_search_field()"></i>
+               <input type="search" name="navbar-search"
+                v-bind:id="class_of_navbar_search_field" 
+                v-model="value_of_navbar_search_field"
+                v-on:keyup.enter="anything()">
+               
+                <i class="fi fi-rr-search" @click="show_search_field()"></i>
                <div class="ver-line"></div>
                <div class="nav-user" @click="onclick_dropdow()">
                   <p onselectstart='return false'> Bem vindo! <?php echo $user->nome; ?></p>
@@ -135,12 +139,12 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
       <div id="mid-return"></div>
 
       <section class="student-life">
-         <img src="https://th.bing.com/th/id/R.9e3ea311da1788ea1ff72c567f7b4470?rik=Dqtq8%2bR2irfaQw&riu=http%3a%2f%2fwww.gifs-animados.net%2fprofissao%2fprofissao098.gif&ehk=QBHuFi%2faXzfmq3NmFKQQIXyQWBM%2bbO%2f2sul8%2buPTq0Q%3d&risl=&pid=ImgRaw&r=0" alt="">
          <div class="student-life-text">
             <h2 class="title-gg">Teste vocacional</h2>
             <p>Faça um teste para saber em que você pode ser útil, caso não tenha, desista.</p>
             <a href="student-life.php">Comece sua Jornada</a>
          </div>
+         <img src="../src/index/icone_teste_vocacional.png" alt="icone teste vocacional">
       </section>
 
       <section class="student-life">

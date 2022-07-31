@@ -123,3 +123,4 @@ function beginner_animator()
     window.location.href = (window.location.pathname + '#profissional_animator');  
     pro.checked="checked"
   }
+

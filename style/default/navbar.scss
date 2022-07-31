@@ -94,7 +94,7 @@
 }
 #navbar-search-field--active{
 	display: block;
-	height: 50%;
+	height: 45%;
 	background: #414241;
 	color: var(--text-color);
 	z-index: 0;
@@ -103,11 +103,35 @@
 	outline-offset: 2px;
 	padding-left: 2%;
 	margin-right: -22px;
+	transition: .3s;
 	animation: go-show 1.5s forwards;
 }
+#navbar-search-field--active:focus{
+	border-color: var(--primary-low);
+}
+
 @keyframes go-show{
-	from{width:0;}
+	from{width:0;padding: 0;}
 	to{width: 17rem;}
+}
+
+#navbar-search-field--closed{
+	display: block;
+	height: 45%;
+	background: #414241;
+	color: var(--text-color);
+	z-index: 0;
+	border: none;
+	border-bottom: 1px solid;
+	outline-offset: 2px;
+	padding-left: 2%;
+	margin-right: -22px;
+	animation: close-search-navbar 1.5s forwards;
+}
+
+@keyframes close-search-navbar{
+	from{width: 17rem;}
+	to{width:0;padding: 0;}
 }
 /*-------Nav-User------*/
 .navbar-top .nav-user{position: relative;}

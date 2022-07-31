@@ -24,7 +24,7 @@
    <!-----End-Navbar----->
 
 
-   <header>
+   <header v-on:mouseover="mouse_light()">
       <div class="header-text">
          <h1 class="selected">Newron</h1>
          <h1>Descubra novos Caminhos</h1>

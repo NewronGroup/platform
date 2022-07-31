@@ -1,5 +1,6 @@
 new Vue({
    el: '.navbar',
+   name: 'navbar',
    data() {
       return {
          navbar_title_1: 'Sobre nós',
@@ -11,6 +12,7 @@ new Vue({
          user_name:'Entrar',
          user_online:true,
          class_of_navbar_search_field:'navbar-search-field',
+         value_of_navbar_search_field:null,
       }
    },
    methods: {
@@ -24,11 +26,12 @@ new Vue({
       },
       show_search_field(){
          
-         if(this.class_of_navbar_search_field=('navbar-search-field')){
+         if(this.class_of_navbar_search_field=='navbar-search-field' || this.class_of_navbar_search_field=='navbar-search-field--closed'){
             this.class_of_navbar_search_field=('navbar-search-field--active')
          }
-         else{
-            this.class_of_navbar_search_field=('navbar-search-field')
+         else
+         {
+            this.class_of_navbar_search_field=('navbar-search-field--closed')
          }
       },
       onclick_dropdow(){
@@ -36,12 +39,24 @@ new Vue({
          var toggle_var = false
          if(toggle_var=false){
             dropdown.classList.add('show')
-            toggle_var=true
+            return toggle_var=true; 
          }
          else{
             dropdown.classList.remove('show')
          }
       },
+      anything(){
+         console.log(this.value_of_navbar_search_field);
+         
+         if
+         (
+            this.value_of_navbar_search_field == 'student'
+
+         )
+         {window.location = "student-life.php"}
+         
+
+      }
       
    },
 })
