@@ -59,11 +59,18 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
             </div>
 
             <div class="nav-right">
-               <input type="search" name="navbar-search"
+               <input type="search" name="navbar-search" list="pages"
                 v-bind:id="class_of_navbar_search_field" 
                 v-model="value_of_navbar_search_field"
                 v-on:keyup.enter="anything()">
-               
+               <datalist id="pages">
+                  <option value="Student life"></option>
+                  <option value="Sobre nós"></option>
+                  <option value="Teste vocacional"></option>
+                  <option value="FAQ"></option>
+                  <option value="Políticas de privacidade e inclusão"></option>
+                  <option value="Página inicial"></option>
+               </datalist>
                 <i class="fi fi-rr-search" @click="show_search_field()"></i>
                <div class="ver-line"></div>
                <div class="nav-user" @click="onclick_dropdow()">
