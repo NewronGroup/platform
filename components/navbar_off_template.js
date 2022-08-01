@@ -50,10 +50,50 @@ new Vue({
          
          if
          (
+            this.value_of_navbar_search_field == 'Student life' 
+            ||
             this.value_of_navbar_search_field == 'student'
-
+            ||
+            this.value_of_navbar_search_field == 'stud'
+            ||
+            this.value_of_navbar_search_field == 'Vida do estudante'
          )
          {window.location = "student-life.php"}
+         else if
+         (
+            this.value_of_navbar_search_field == 'Sobre nós'
+            ||
+            this.value_of_navbar_search_field == 'About us'
+         )
+         {window.location = "about-us.php"}
+         else if
+         (
+            this.value_of_navbar_search_field == 'Teste vocacional'
+            ||
+            this.value_of_navbar_search_field == 'Vocational test'
+         )
+         {window.location = "index.php"}
+         else if
+         (
+            this.value_of_navbar_search_field == 'FAQ'
+            ||
+            this.value_of_navbar_search_field == 'Perguntas frequentes'
+         )
+         {window.location = "faq.php"}
+         else if
+         (
+            this.value_of_navbar_search_field == 'Políticas de privacidade e inclusão'
+            ||
+            this.value_of_navbar_search_field == 'Policies'
+         )
+         {window.location = "policies.php"}
+         else if
+         (
+            this.value_of_navbar_search_field == 'Página inicial'
+            ||
+            this.value_of_navbar_search_field == 'Homepage'
+         )
+         {window.location = "index.php"}
          
 
       }

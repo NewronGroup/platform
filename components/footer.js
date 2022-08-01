@@ -21,7 +21,7 @@ footer = new Vue({
       <div class="footer-left">
          <h3 class="title-m">Empresa</h3>
          <a class="par-m" href="#">Quem Somos</a>
-         <a class="par-m" href="policies.html">Políticas de Privacidade e Inclusão</a>
+         <a class="par-m" href="policies.php">Políticas de Privacidade e Inclusão</a>
       </div>
       <div class="footer-center">
          <h3 class="title-m">Colaboradores</h3>
