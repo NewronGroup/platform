@@ -53,16 +53,13 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
                   <a href="partners.php">{{navbar_title_2}}</a>
                   <span class="navtop-line"></span>
                   <ul>{{navbar_dropdown_title_1}}
-                     <li><a href="not-ready.php">Fórum</a></li>
+                     <li><a href="forum.php">Fórum</a></li>
                   </ul>
                </div>
             </div>
 
             <div class="nav-right">
-               <input type="search" name="navbar-search" list="pages"
-                v-bind:id="class_of_navbar_search_field" 
-                v-model="value_of_navbar_search_field"
-                v-on:keyup.enter="anything()">
+               <input type="search" name="navbar-search" list="pages" v-bind:id="class_of_navbar_search_field" v-model="value_of_navbar_search_field" v-on:keyup.enter="anything()">
                <datalist id="pages">
                   <option value="Student life"></option>
                   <option value="Sobre nós"></option>
@@ -71,7 +68,7 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
                   <option value="Políticas de privacidade e inclusão"></option>
                   <option value="Página inicial"></option>
                </datalist>
-                <i class="fi fi-rr-search" @click="show_search_field()"></i>
+               <i class="fi fi-rr-search" @click="show_search_field()"></i>
                <div class="ver-line"></div>
                <div class="nav-user" @click="onclick_dropdow()">
                   <p onselectstart='return false'> Bem vindo! <?php echo $user->nome; ?></p>
@@ -120,7 +117,6 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
          </aside>
       </section>
    </section>
-
    <script src="../components/navbar_off_template.js"></script>
    <!-----Header----->
 
