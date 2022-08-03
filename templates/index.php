@@ -47,21 +47,20 @@ include_once 'db_engine/bd_mysql_pdo.php';
 
 
    <!-------Ads------->
-   <a href="#top-return" target="_self">
+   <a href="#top-return">
       <div class="top-return"></div>
    </a>
-   <!-------Ads------->
-
+   <!-------Main------->
    <main>
       <div id="mid-return"></div>
-      <!-------Main------->
+
       <section class="student-life">
-         <img src="https://th.bing.com/th/id/R.9e3ea311da1788ea1ff72c567f7b4470?rik=Dqtq8%2bR2irfaQw&riu=http%3a%2f%2fwww.gifs-animados.net%2fprofissao%2fprofissao098.gif&ehk=QBHuFi%2faXzfmq3NmFKQQIXyQWBM%2bbO%2f2sul8%2buPTq0Q%3d&risl=&pid=ImgRaw&r=0" alt="">
          <div class="student-life-text">
             <h2 class="title-gg">Teste vocacional</h2>
             <p>Faça um teste para saber em que você pode ser útil, caso não tenha, desista.</p>
             <a href="student-life.php">Comece sua Jornada</a>
          </div>
+         <img src="../src/index/icone_teste_vocacional.png" alt="icone teste vocacional">
       </section>
 
       <section class="student-life">
@@ -107,7 +106,6 @@ include_once 'db_engine/bd_mysql_pdo.php';
          </div>
       </section>
    </main>
-   <!-------End Main------->
    <!-------Footer------->
    <footer></footer>
    <script src="../components/footer.js"></script>

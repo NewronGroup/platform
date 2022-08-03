@@ -53,12 +53,12 @@ navbar = new Vue({
                </ul>
             </div>
          </div>
-
+   
          <div class="nav-right">
             <input type="search" name="navbar-search" v-bind:id="class_of_navbar_search_field">
             <i class="fi fi-rr-search" @click="show_search_field()"></i>
             <div class="ver-line"></div>
-            <div class="nav-user" >
+            <div class="nav-user">
                <a href="sign-in.php" class="login">Entrar</a>
             </div>
          </div>

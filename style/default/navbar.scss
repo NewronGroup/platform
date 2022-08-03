@@ -146,7 +146,9 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 /*-------Nav-User------*/
 .navbar-top .nav-user{position: relative;}
-.navbar-top .nav-user p{color: var(--text-color);cursor: pointer;}
+.navbar-top .nav-user :is(p,a){color: var(--text-color);cursor: pointer;}
+.navbar-top .nav-user a:hover{color: var(--primary-low);cursor: pointer;}
+
 
 
 

@@ -426,6 +426,8 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
          </div>
       </div>
    </div>
+   
+   
    <section class="student-life" id="sl-default">
       <h3>Expanda seu conhecimento explorando novos assuntos no Student Life.</h3>
       <br>
@@ -437,6 +439,7 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
 
       <p style="margin:auto; text-align:center;">Escolha sua trilha acima <i class="fi fi-rr-caret-up"></i></p>
    </section>
+   
    <section class="student-life hide" id="sl-dev-web">
       <h2> Desenvolvedor Web</h2>
       <p style="margin:auto; text-align:center;">Em qual nível você está?</p>
@@ -495,6 +498,7 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
          </div>
       </div>
    </section>
+   
    <section class="student-life hide" id="sl-anim">
       <h2> Animação</h2>
       <p style="margin:auto; text-align:center;">Em qual nível você está?</p>
@@ -513,6 +517,46 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
       </div>
 
       <div class="sl-card" id="beginner_animator">
+         <img src="../src/logo/shiba/shiba_1.png" alt="">
+         <div class="text">
+            <h3>Animador Iniciante</h3>
+            <p>
+               <li>Lógica da Programação</li>
+               <li>HTML/CSS</li>
+               <li>Introdução ao Python</li>
+               <li>Inglês</li>
+
+            </p>
+            <a href="#"><i class="fi fi-rr-cross-small"></i></a>
+         </div>
+      </div>
+      <div class="sl-card" id="intermediate_animator">
+         <img src="../src/logo/shiba/shiba_2.png" alt="">
+         <div class="text">
+            <h3>Desenvolvedor Intermediário</h3>
+            <p>
+               <li>Foque em aprender uma Linguagem e o Domínio</li>
+               <li>Banco de Dados - PHP/MySQL</li>
+               <li>Bibliotecas</li>
+               <li>Inglês </li>
+            </p>
+            <a href="#"><i class="fi fi-rr-cross-small"></i></a>
+         </div>
+      </div>
+      <div class="sl-card" id="profissional_animator">
+         <img src="../src/logo/shiba/shiba_3.png" alt="">
+         <div class="text">
+            <h3>Desenvolvedor Avançado</h3>
+            <p>
+               <li>Especialização em uma Linguagem</li>
+               <li>Linguagens diversas</li>
+               <li>Networking</li>
+               <li>Ajude a Comunidade</li>
+            </p>
+            <a href="#"><i class="fi fi-rr-cross-small"></i></a>
+         </div>
+      </div>
+       <div class="sl-card" id="beginner_animator">
          <img src="../src/logo/shiba/shiba_1.png" alt="">
          <div class="text">
             <h3>Animador Iniciante</h3>
@@ -595,6 +639,73 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
 
 
          </div>
+
+      </section>
+   </section>
+   
+   <section class="student-life hide" id="sl-photo">
+      <h2> Fotografia</h2>
+      <p style="margin:auto; text-align:center;">Em qual nível você está?</p>
+      <div class="progress-bar">
+
+         <input type="radio" name="hide" class="beg">
+         <input type="radio" name="hide" class="int">
+         <input type="radio" name="hide" class="pro">
+
+         <button class="circle nv1-circle" onclick="beginner_fotografia()"></button>
+         <div class="bar n1-bar"></div>
+         <button class="circle nv2-circle" onclick="intermediate_fotografia()"></button>
+         <div class="bar n2-bar"></div>
+         <button class="circle nv3-circle" onclick="profissional_fotografia()"></button>
+      </div>
+      </div>
+
+      <div class="sl-card" id="beginner_fotografia">
+         <img src="../src/logo/shiba/shiba_1.png" alt="">
+         <div class="text">
+            <h3>Animador Iniciante</h3>
+            <p>
+               <li>Defina seus traços</li>
+               <li>Técnica de Comprimir e esticar</li>
+               <li>Técnica de Antecipação</li>
+               <li>Técnica de Encenação</li>
+
+            </p>
+            <a href="#"><i class="fi fi-rr-cross-small"></i></a>
+         </div>
+      </div>
+      <div class="sl-card" id="intermediate_fotografia">
+         <img src="../src/logo/shiba/shiba_2.png" alt="">
+         <div class="text">
+            <h3>Animador Intermediário</h3>
+            <p>
+               <li>Técnica de Animação direta e pose a pose</li>
+               <li>Técnica de Continuidade e sobreposição da ação</li>
+               <li>Técnica Aceleração e desaceleração</li>
+               <li>Técnica Movimento em arco </li>
+            </p>
+            <a href="#"><i class="fi fi-rr-cross-small"></i></a>
+         </div>
+      </div>
+      <div class="sl-card" id="profissional_fotografia"> 
+         <img src="../src/logo/shiba/shiba_3.png" alt="">
+         <div class="text">
+            <h3>Animador Avançado</h3>
+            <p>
+               <li>Técnica de Ação Secundária</li>
+               <li>Princípio Temporização</li>
+               <li>Princípio Exagero</li>
+               <li>Técnica Desenho volumétrico</li>
+               <li>Trabalhar Apelo — Design Atraente</li>
+            </p>
+            <a href="#"><i class="fi fi-rr-cross-small"></i></a>
+         </div>
+      </div>
+      <section>
+         <br>
+         <br>
+      <h2>CONHEÇA OS 12 PRINCÍPIOS DA ANIMAÇÃO</h2>
+      <br>
 
       </section>
    </section>

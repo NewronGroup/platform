@@ -6,11 +6,10 @@ if (!isset($_SESSION['login']) && (!isset($_SESSION['senha']))) {
 }
 
 $stmt1 = $conn->prepare('select * from usuarios where login = :login');
-
 $stmt1->bindValue('login', $_SESSION['login']);
 $stmt1->execute();
-
 $user = $stmt1->fetch(PDO::FETCH_OBJ);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -130,50 +129,35 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
             <h1>Titulo dos comentarios abaixo</h1>
         </div>
         <section class="comments">
+        <?php				  
+				  $stmt1 = $conn->prepare('select * from forum');
+                  $stmt1->execute();	
+                  while($forum = $stmt1->fetch(PDO::FETCH_OBJ)){  			  
+				  ?>           
             <article>
                 <div class="user-info">
                     <h5>
                         <?php
-                        echo 'Nome do ser de alto calibre que comentou'
+                        echo $forum->nome;
                         ?>
                     </h5>
                     <p>
                         <?php
-                        echo '12hrs'
+                        echo $forum->data_post;
                         ?>
                     </p>
                 </div>
                 <div class="comment">
                     <p>
                         <?php
-                        echo 'Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Cum voluptas, quibusdam fugit quidem cupiditate ipsa?
-                        Culpa aut a vitae est?'
+                        echo $forum->comentarios;
                         ?>
                     </p>
                 </div>
             </article>
-            <article>
-                <div class="user-info">
-                    <h5>
-                        <?php
-                        echo 'Nome do ser de alto calibre que comentou'
-                        ?>
-                    </h5>
-                    <p>
-                        <?php
-                        echo '2 min'
-                        ?>
-                    </p>
-                </div>
-                <div class="comment">
-                    <p>
-                        <?php
-                        echo 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, labore repellendus. Pariatur inventore reiciendis aliquid illum at repellendus? Eaque officia impedit dolor hic, deleniti rem mollitia placeat vitae aut accusamus.'
-                        ?>
-                    </p>
-                </div>
-            </article>
+            <?php
+                }
+            ?>
             <article>
                 <form action="" method="post">
                     <div class="user-info">
@@ -189,11 +173,32 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
                     </div>
                     <div class="comment">
                         <p>
-                            <textarea name="" id="" rows="4"></textarea>
+                            <textarea name="comentarios" id="" rows="4"></textarea>
                         </p>
 
-                        <input type="submit" value="Enviar">
-                    </div>
+                        <input type="submit" name="enviar" value="Enviar">
+                     </div>
+                     <?php
+
+                        if (isset($_POST['enviar'])) {
+                                $stmt = $conn->prepare('insert into forum(id_user, nome, comentarios)
+                                                                      values(:id_user, :nome, :comentarios)');
+                                $stmt->bindValue('id_user',  $user->id_user);
+                                $stmt->bindValue('nome', $user->nome);
+                                $stmt->bindValue('comentarios', $_POST['comentarios']);                             
+                             
+                          if ($stmt->execute()) {
+                                 echo '<div class="alert alert-success">Mensagem incluida com sucesso</div>';
+
+                         }else{
+                                 echo '<div class="alert alert-danger">Erro no envio da mensagem</div>';
+                             }
+        
+                    }
+
+                        ?>
+
+
                 </form>
             </article>
         </section>
