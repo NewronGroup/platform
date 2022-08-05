@@ -426,8 +426,8 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
          </div>
       </div>
    </div>
-   
-   
+
+
    <section class="student-life" id="sl-default">
       <h3>Expanda seu conhecimento explorando novos assuntos no Student Life.</h3>
       <br>
@@ -439,7 +439,7 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
 
       <p style="margin:auto; text-align:center;">Escolha sua trilha acima <i class="fi fi-rr-caret-up"></i></p>
    </section>
-   
+
    <section class="student-life hide" id="sl-dev-web">
       <h2> Desenvolvedor Web</h2>
       <p style="margin:auto; text-align:center;">Em qual nível você está?</p>
@@ -498,7 +498,7 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
          </div>
       </div>
    </section>
-   
+
    <section class="student-life hide" id="sl-anim">
       <h2> Animação</h2>
       <p style="margin:auto; text-align:center;">Em qual nível você está?</p>
@@ -556,7 +556,7 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
             <a href="#"><i class="fi fi-rr-cross-small"></i></a>
          </div>
       </div>
-       <div class="sl-card" id="beginner_animator">
+      <div class="sl-card" id="beginner_animator">
          <img src="../src/logo/shiba/shiba_1.png" alt="">
          <div class="text">
             <h3>Animador Iniciante</h3>
@@ -642,7 +642,7 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
 
       </section>
    </section>
-   
+
    <section class="student-life hide" id="sl-photo">
       <h2> Fotografia</h2>
       <p style="margin:auto; text-align:center;">Em qual nível você está?</p>
@@ -687,7 +687,7 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
             <a href="#"><i class="fi fi-rr-cross-small"></i></a>
          </div>
       </div>
-      <div class="sl-card" id="profissional_fotografia"> 
+      <div class="sl-card" id="profissional_fotografia">
          <img src="../src/logo/shiba/shiba_3.png" alt="">
          <div class="text">
             <h3>Animador Avançado</h3>
@@ -704,8 +704,8 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
       <section>
          <br>
          <br>
-      <h2>CONHEÇA OS 12 PRINCÍPIOS DA ANIMAÇÃO</h2>
-      <br>
+         <h2>CONHEÇA OS 12 PRINCÍPIOS DA ANIMAÇÃO</h2>
+         <br>
 
       </section>
    </section>

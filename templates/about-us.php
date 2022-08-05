@@ -42,6 +42,32 @@
             <p>Essa é uma plataforma que se empenha em seu Planejamento e Acessibilidade, 
             se manter livre de custos para o usuario final enquanto oferecemos um bom planejamento de carreira é nosso primeiro e mais importante objetivo da Newron.</p>
       </section>
+      <section class="advantages">
+         <h4 class="title">Um pouco sobre a Newron</h4>
+         <div class="advantages-cards">
+            <div>
+               <img src="../src/images/cards/target.png" alt="">
+               <div>
+                  <h4><strong>Missão</strong></h4>
+                  <p>Direcionar as pessoas nas decisões dos estudos e na carreira.</p>
+               </div>
+            </div>
+            <div>
+               <img src="../src/images/cards/web-design.png" alt="">
+               <div>
+                  <h4><strong>Visão</strong></h4>
+                  <p>Tornar-se a plataforma de orientação profissional mais reconhecida do Brasil</p>
+               </div>
+            </div>
+            <div>
+               <img src="../src/images/cards/chart.png" alt="">
+               <div>
+                  <h4><strong>Valores</strong></h4>
+                  <p>Planejamento, Acessibilidade,<br>Criatividade e Confiança</p>
+               </div>
+            </div>
+         </div>
+      </section>
    </main>
 
    <!-------Footer------->

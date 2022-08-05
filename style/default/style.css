@@ -42,7 +42,7 @@ body {
   background: var(--background-light);
   font-family: 'Poppins', sans-serif;
   font-size: var(--default-text-size);
-  color: #e6e6e6;
+  color: var(--default-text-color-dark);
   -webkit-animation: body-show .5s;
   animation: body-show .5s;
 }
