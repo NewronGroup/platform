@@ -135,6 +135,7 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
          <p>Essa é uma plataforma que se empenha em seu Planejamento e Acessibilidade,
             se manter livre de custos para o usuario final enquanto oferecemos um bom planejamento de carreira é nosso primeiro e mais importante objetivo da Newron.</p>
       </section>
+      <h2>Uma mensagem do nosso lime</h2>
       <section class="advantages">
          <h4 class="title">Um pouco sobre a Newron</h4>
          <div class="advantages-cards">

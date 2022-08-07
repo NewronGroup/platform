@@ -1,7 +1,3 @@
-<?php
-include_once 'db_engine/bd_mysql_pdo.php';
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 

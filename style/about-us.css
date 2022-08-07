@@ -63,7 +63,7 @@ main {
 .advantages .title {
   margin-bottom: 2%;
   font-size: 2rem;
-  color: var(--primary-low);
+  color: var(--primary-strong);
 }
 
 .advantages-cards {

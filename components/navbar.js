@@ -49,7 +49,7 @@ navbar = new Vue({
                <a href="partners.php">{{navbar_title_2}}</a>
                <span class="navtop-line"></span>
                <ul>{{navbar_dropdown_title_1}}
-                  <li ><a href="not-ready.php">Fórum</a></li>
+                  <li ><a href="forum-please-login.php">Fórum</a></li>
                </ul>
             </div>
          </div>

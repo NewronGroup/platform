@@ -7,7 +7,7 @@
 :root {
   --bg-sl:#e6e6e6;
   --bg-pure-white:white;
-  --sl-text-light:rgb(0, 0, 0);
+  --sl-text-light:#f5f5f5;
   --sl-text-light1:#000000;
   --sl-text-dark:black;
   --sl-text-dark1:#121212;
@@ -163,6 +163,7 @@ header img {
 
 .header-areas button a:hover {
   background: var(--header-btn-hover);
+  color: var(--sl-text-dark);
 }
 
 .header-areas button a:focus {
@@ -445,6 +446,146 @@ header img {
     opacity: 1;
   }
 }
+/*-------------------------------------------------------------------------------------------------*/
+.all-content {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  -webkit-animation: show-on-all-display 1.5s forwards;
+          animation: show-on-all-display 1.5s forwards;
+}
+
+@-webkit-keyframes show-on-all-display {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes show-on-all-display {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+@-webkit-keyframes show-please-login {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes show-please-login {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.please-login {
+  position: relative;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  height: auto; /*40vh*/
+  min-width: 300px;
+  width: 40vw;
+  padding: 2%;
+  z-index: 22;
+  background: var(--background-light);
+  color: var(--default-text--color);
+  box-shadow: 0 0 50px -30px black;
+  -webkit-animation: show-please-login 1.5s 0.3s forwards;
+          animation: show-please-login 1.5s 0.3s forwards;
+}
+
+.please-login a:hover {
+  text-decoration: underline;
+}
+
+.please-title h3 {
+  font-size: 1.8rem;
+}
+
+.please-mid {
+  letter-spacing: 1px;
+  line-height: 120%;
+  padding: 5% 2%;
+}
+
+.please-mid a:nth-of-type(2) {
+  font-size: 90%;
+}
+
+.please-end {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.please-end > a {
+  width: 47.5%;
+  height: 5vh;
+  padding: 1%;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  border: 1px solid;
+  font-weight: 500;
+}
+
+.please-end > a:nth-of-type(1) {
+  background: var(--background-light);
+  color: var(--default-text--color);
+  border-color: lightgray;
+}
+
+.please-end > a:nth-of-type(1):hover {
+  background: var(--background-light2);
+  border-color: var(--primary-color);
+}
+
+.please-end > a:nth-of-type(2) {
+  background: var(--primary-low);
+  color: var(--default-text-color);
+  border: lightgray;
+}
+
+.please-end > a:nth-of-type(2):hover {
+  background: var(--primary-strong);
+}
+
+@media (max-width: 1000px) {
+  .please-login {
+    width: 70vw;
+    padding: 8%;
+  }
+}
+@media (max-width: 700px) {
+  .please-login {
+    width: 95vw;
+  }
+}
+/*-------------------------------------------------------------------------------------------------*/
 /*Responsividade*/
 @media (max-width: 800px) {
   .mouse {
