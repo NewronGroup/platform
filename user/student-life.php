@@ -445,9 +445,9 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
       <p style="margin:auto; text-align:center;">Em qual nível você está?</p>
       <div class="progress-bar">
 
-         <input type="radio" name="hide" id="beg">
-         <input type="radio" name="hide" id="int">
-         <input type="radio" name="hide" id="pro">
+         <input type="radio" name="hide" class="beg">
+         <input type="radio" name="hide" class="int">
+         <input type="radio" name="hide" class="pro">
 
          <button class="circle nv1-circle" onclick="beginner()"></button>
          <div class="bar n1-bar"></div>
