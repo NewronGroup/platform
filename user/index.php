@@ -141,11 +141,11 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
    <main>
       <div id="mid-return"></div>
 
-      <section class="student-life">
+      <section class="student-life vocational-test">
          <div class="student-life-text">
             <h2 class="title-gg">Teste vocacional</h2>
             <p>Faça um teste para saber em que você pode ser útil, caso não tenha, desista.</p>
-            <a href="student-life.php">Comece sua Jornada</a>
+            <a href="not-ready.php">Comece sua Jornada</a>
          </div>
          <img src="../src/index/icone_teste_vocacional.png" alt="icone teste vocacional">
       </section>

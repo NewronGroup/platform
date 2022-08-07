@@ -7,6 +7,24 @@ body{
     width: 100%;height: 100%;overflow: hidden;  
 }
 
+button.return-last-page{
+    position: absolute;
+    top:15px;left: 15px;
+    font-size: 2rem;
+    z-index: 2;
+    color: var(--background-light);
+    transition: transform .8s;
+    cursor: pointer;
+    background: transparent;
+}
+
+button.return-last-page:hover{animation: soft-movimet 2s infinite alternate cubic-bezier(0.68, -0.6, 0.32, 1.6)}
+
+@keyframes soft-movimet{
+    50%{transform: translateX(20px);}
+    100%{transform: translateX(0);}
+}
+    
 a{text-decoration: none;}
 a::before{display: none;}
 
@@ -114,6 +132,7 @@ background: var(--background-light);
     cursor: pointer;
 }
 .sign-up a{
+    display: grid;place-items: center;
     width: 100%;height: 100%;
     font: 1rem 'Poppins', sans-serif;
     text-transform: uppercase;
