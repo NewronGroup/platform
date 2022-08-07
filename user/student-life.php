@@ -340,7 +340,7 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
             <a href="">Captação de Som</a>
             <a href="">Roteiro</a>
             <a href="">Direção da Arte</a>
-            <a href="">Fotografia</a>
+            <a href="#" onclick="show_fotografia()">Fotografia</a>
             <a href="">Sonorização</a>
 
          </div>
@@ -652,15 +652,15 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
          <input type="radio" name="hide" class="int">
          <input type="radio" name="hide" class="pro">
 
-         <button class="circle nv1-circle" onclick="beginner_fotografia()"></button>
+         <button class="circle nv1-circle" onclick="beginner_photo()"></button>
          <div class="bar n1-bar"></div>
-         <button class="circle nv2-circle" onclick="intermediate_fotografia()"></button>
+         <button class="circle nv2-circle" onclick="intermediate_photo()"></button>
          <div class="bar n2-bar"></div>
-         <button class="circle nv3-circle" onclick="profissional_fotografia()"></button>
+         <button class="circle nv3-circle" onclick="profissional_photo()"></button>
       </div>
       </div>
 
-      <div class="sl-card" id="beginner_fotografia">
+      <div class="sl-card" id="beginner_photo">
          <img src="../src/logo/shiba/shiba_1.png" alt="">
          <div class="text">
             <h3>Animador Iniciante</h3>
@@ -674,7 +674,7 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
             <a href="#"><i class="fi fi-rr-cross-small"></i></a>
          </div>
       </div>
-      <div class="sl-card" id="intermediate_fotografia">
+      <div class="sl-card" id="intermediate_photo">
          <img src="../src/logo/shiba/shiba_2.png" alt="">
          <div class="text">
             <h3>Animador Intermediário</h3>
@@ -687,7 +687,7 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
             <a href="#"><i class="fi fi-rr-cross-small"></i></a>
          </div>
       </div>
-      <div class="sl-card" id="profissional_fotografia">
+      <div class="sl-card" id="profissional_photo">
          <img src="../src/logo/shiba/shiba_3.png" alt="">
          <div class="text">
             <h3>Animador Avançado</h3>
@@ -702,11 +702,7 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
          </div>
       </div>
       <section>
-         <br>
-         <br>
-         <h2>CONHEÇA OS 12 PRINCÍPIOS DA ANIMAÇÃO</h2>
-         <br>
-
+         <!-- O conteúdo feito aqui será exposto mesmo pós clicar nas seleções iniciante, intermediário ou profissional -->
       </section>
    </section>
 
