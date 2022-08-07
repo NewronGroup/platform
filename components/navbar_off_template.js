@@ -7,12 +7,14 @@ new Vue({
          navbar_title_2: 'Parceiros',
          navbar_dropdown_title_1: 'Comunidade',
          navbar_dropdown_1_subtitle: 'Fórum',
+         search_icon:'fi fi-rr-search',
 
          mobile_menu_switch: false,
          user_name:'Entrar',
          user_online:true,
          class_of_navbar_search_field:'navbar-search-field',
          value_of_navbar_search_field:null,
+         class_of_dropdow_user:'dropdow-user-closed',
       }
    },
    methods: {
@@ -28,21 +30,20 @@ new Vue({
          
          if(this.class_of_navbar_search_field=='navbar-search-field' || this.class_of_navbar_search_field=='navbar-search-field--closed'){
             this.class_of_navbar_search_field=('navbar-search-field--active')
+            this.search_icon=('fi fi-rr-cross')
          }
          else
          {
             this.class_of_navbar_search_field=('navbar-search-field--closed')
+            this.search_icon=('fi fi-rr-search')
          }
       },
       onclick_dropdow(){
-         const dropdown = document.querySelector('.dropdow-user')
-         var toggle_var = false
-         if(toggle_var=false){
-            dropdown.classList.add('show')
-            return toggle_var=true; 
+         if (this.class_of_dropdow_user=='dropdow-user-closed'){
+            this.class_of_dropdow_user='dropdow-user-actived'
          }
          else{
-            dropdown.classList.remove('show')
+            this.class_of_dropdow_user='dropdow-user-closed'
          }
       },
       anything(){

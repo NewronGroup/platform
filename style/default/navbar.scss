@@ -152,7 +152,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 
 
-.dropdow-user{
+.dropdow-user-closed{
 	display: none;
 	position: absolute;
 	top: 100%;right: 2%;
@@ -160,16 +160,43 @@ input[type="search"]::-webkit-search-results-decoration {
 	padding: 2%;
 	background: rgba(255, 255, 255, 0.1);
 }
-
-.show{
-	display: block;
+.dropdow-user-actived{
+	display: flex;flex-direction: column;
+	position: absolute;
+	transform: translateX(-50%);
+	left: 50%;top: calc(150% - 2px);
+	width: calc(125% - 2px);max-width: 30vw;
+	border-left: 1px solid var(--primary-color);
+	border-bottom: 1px solid var(--primary-color);
+	padding: 2%;
+	background: #242424;
+	animation: dropdow-apper .5s forwards;
 }
 
-.dropdow-user > *{
-	display: block;
-	color:var(--text-color)
+@keyframes dropdow-apper{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
 }
-.dropdow-user > *:hover{
+
+.dropdow-user-actived > a:nth-of-type(2){
+	display: flex;align-items: flex-end;justify-content: flex-end;
+	gap: 5px;
+	text-align: end;
+}
+.dropdow-user-actived > a i{
+	line-height: 100%;
+}
+.dropdow-user-actived > a{
+	display: block;
+	color:var(--text-color);
+	padding: 2% 4% 2% 0;
+	text-align: end;
+}
+.dropdow-user-actived > a:hover{
 	color: var(--primary-low);
 }
 

@@ -51,7 +51,6 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
                   </ul>
                </div>
             </div>
-
             <div class="nav-right">
                <input type="search" name="navbar-search" list="pages" v-bind:id="class_of_navbar_search_field" v-model="value_of_navbar_search_field" v-on:keyup.enter="anything()">
                <datalist id="pages">
@@ -62,15 +61,16 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
                   <option value="Políticas de privacidade e inclusão"></option>
                   <option value="Página inicial"></option>
                </datalist>
-               <i class="fi fi-rr-search" @click="show_search_field()"></i>
+               <i v-bind:class="search_icon" @click="show_search_field()"></i>
                <div class="ver-line"></div>
                <div class="nav-user" @click="onclick_dropdow()">
-                  <p onselectstart='return false'> Bem vindo! <?php echo $user->nome; ?></p>
+                  <p> Bem vindo! <?php echo $user->nome; ?></p>
+                  <div v-bind:class="class_of_dropdow_user">
+                     <a href="">Editar Perfil</a>
+                     <a href="db_engine/bd_mysql_destroy_pdo.php">Sair <i class="fi fi-rr-sign-in-alt"></i></a>
+                  </div>
                </div>
-               <div class="dropdow-user">
-                  <a href="">Editar Perfil</a>
-                  <a href="db_engine/bd_mysql_destroy_pdo.php">Sair <i class="fi fi-rr-sign-in-alt"></i></a>
-               </div>
+               
             </div>
          </div>
          <div class="nav-components-mobile">
