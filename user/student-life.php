@@ -1,3 +1,17 @@
+<?php
+include_once 'db_engine/bd_mysql_pdo.php';
+session_start();
+if (!isset($_SESSION['login']) && (!isset($_SESSION['senha']))) {
+   header('Location: ../templates/index.php');
+}
+
+$stmt1 = $conn->prepare('select * from usuarios where login = :login');
+
+$stmt1->bindValue('login', $_SESSION['login']);
+$stmt1->execute();
+
+$user = $stmt1->fetch(PDO::FETCH_OBJ);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,10 +32,88 @@
 
 <body>
    <!-------Loader------->
-   <div class="loader"></div><script src="../script/preloader.js"></script>
+   <div class="loader"></div>
+   <script src="../script/preloader.js"></script>
    <!-------Navbar------->
-   <div class="navbar"></div> <script src="../components/navbar.js"></script>
-   <!-----End-Navbar----->
+   <section class="navbar">
+      <section class="navbar-top">
+         <div class="nav-components">
+            <div class="nav-left">
+               <div class="nav-logo">
+                  <a href="index.php"><img src="../src/logo/logo-no-details.png" alt="logo"></a>
+               </div>
+               <div class="nav-links">
+                  <a href="about-us.php">{{navbar_title_1}}</a>
+                  <span class="navtop-line"></span>
+                  <a href="partners.php">{{navbar_title_2}}</a>
+                  <span class="navtop-line"></span>
+                  <ul>{{navbar_dropdown_title_1}}
+                     <li><a href="forum.php">Fórum</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="nav-right">
+               <input type="search" name="navbar-search" list="pages" v-bind:id="class_of_navbar_search_field" v-model="value_of_navbar_search_field" v-on:keyup.enter="anything()">
+               <datalist id="pages">
+                  <option value="Student life"></option>
+                  <option value="Sobre nós"></option>
+                  <option value="Teste vocacional"></option>
+                  <option value="FAQ"></option>
+                  <option value="Políticas de privacidade e inclusão"></option>
+                  <option value="Página inicial"></option>
+               </datalist>
+               <i v-bind:class="search_icon" @click="show_search_field()"></i>
+               <div class="ver-line"></div>
+               <div class="nav-user" @click="onclick_dropdow()">
+                  <p> Bem vindo! <?php echo $user->nome; ?></p>
+                  <div v-bind:class="class_of_dropdow_user">
+                     <a href="">Editar Perfil</a>
+                     <a href="db_engine/bd_mysql_destroy_pdo.php">Sair <i class="fi fi-rr-sign-in-alt"></i></a>
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+         <div class="nav-components-mobile">
+            <div class="nav-left">
+               <div class="nav-logo">
+                  <a href="index.php"><img src="../src/logo/logo-no-details.png" alt="logo"></a>
+               </div>
+            </div>
+            <div class="nav-mobile-right">
+               <i class="fi fi-rr-menu-burger" @click="open_mobile_menu()" v-if="mobile_menu_switch==false"></i>
+               <i class="fi fi-rr-cross" @click="close_mobile_menu()" v-else></i>
+            </div>
+         </div>
+      </section>
+      <section class="navbar-mobile" v-if="mobile_menu_switch==true">
+         <aside class="mobile-menu">
+            <div class="exit-button" @click="mobile_menu_switch=false"><i class="fi fi-rr-cross-circle"></i></div>
+            <div class="profile-settings">
+               <a href="">Editar Perfil<i class="fi fi-rr-edit"></i></a>
+               <a class="button-close-session" href="db_engine/bd_mysql_destroy_pdo.php">Desconectar<i class="fi  fi-rr-sign-in-alt"></i></a>
+            </div>
+
+            <div class="nav-user">
+               <p>Bem vindo <?php echo $user->nome; ?></p>
+            </div>
+            <hr>
+            <div class="search">
+               <a href=""><i class="fi fi-rr-search" @click=""></i>&nbsp;&nbsp;Pesquisar</a>
+            </div>
+            <hr>
+            <div class="nav-links">
+               <a href="about-us.php">{{navbar_title_1}}</a>
+               <a href="partners.php">{{navbar_title_2}}</a>
+               <ul>{{navbar_dropdown_title_1}}<i class="fi fi-rr-angle-small-down"></i>
+                  <li><a href="not-ready.php">Fórum</a></li>
+               </ul>
+            </div>
+         </aside>
+      </section>
+   </section>
+   <script src="../components/navbar_off_template.js"></script>
+   <!-----Header----->
 
 
    <header>
@@ -248,7 +340,7 @@
             <a href="">Captação de Som</a>
             <a href="">Roteiro</a>
             <a href="">Direção da Arte</a>
-            <a href="">Fotografia</a>
+            <a href="#" onclick="show_fotografia()">Fotografia</a>
             <a href="">Sonorização</a>
 
          </div>
@@ -334,6 +426,8 @@
          </div>
       </div>
    </div>
+
+
    <section class="student-life" id="sl-default">
       <h3>Expanda seu conhecimento explorando novos assuntos no Student Life.</h3>
       <br>
@@ -345,14 +439,15 @@
 
       <p style="margin:auto; text-align:center;">Escolha sua trilha acima <i class="fi fi-rr-caret-up"></i></p>
    </section>
+
    <section class="student-life hide" id="sl-dev-web">
       <h2> Desenvolvedor Web</h2>
       <p style="margin:auto; text-align:center;">Em qual nível você está?</p>
       <div class="progress-bar">
 
-         <input type="radio" name="hide" id="beg">
-         <input type="radio" name="hide" id="int">
-         <input type="radio" name="hide" id="pro">
+         <input type="radio" name="hide" class="beg">
+         <input type="radio" name="hide" class="int">
+         <input type="radio" name="hide" class="pro">
 
          <button class="circle nv1-circle" onclick="beginner()"></button>
          <div class="bar n1-bar"></div>
@@ -403,6 +498,7 @@
          </div>
       </div>
    </section>
+
    <section class="student-life hide" id="sl-anim">
       <h2> Animação</h2>
       <p style="margin:auto; text-align:center;">Em qual nível você está?</p>
@@ -447,7 +543,47 @@
             <a href="#"><i class="fi fi-rr-cross-small"></i></a>
          </div>
       </div>
-      <div class="sl-card" id="profissional_animator"> 
+      <div class="sl-card" id="profissional_animator">
+         <img src="../src/logo/shiba/shiba_3.png" alt="">
+         <div class="text">
+            <h3>Desenvolvedor Avançado</h3>
+            <p>
+               <li>Especialização em uma Linguagem</li>
+               <li>Linguagens diversas</li>
+               <li>Networking</li>
+               <li>Ajude a Comunidade</li>
+            </p>
+            <a href="#"><i class="fi fi-rr-cross-small"></i></a>
+         </div>
+      </div>
+      <div class="sl-card" id="beginner_animator">
+         <img src="../src/logo/shiba/shiba_1.png" alt="">
+         <div class="text">
+            <h3>Animador Iniciante</h3>
+            <p>
+               <li>Lógica da Programação</li>
+               <li>HTML/CSS</li>
+               <li>Introdução ao Python</li>
+               <li>Inglês</li>
+
+            </p>
+            <a href="#"><i class="fi fi-rr-cross-small"></i></a>
+         </div>
+      </div>
+      <div class="sl-card" id="intermediate_animator">
+         <img src="../src/logo/shiba/shiba_2.png" alt="">
+         <div class="text">
+            <h3>Desenvolvedor Intermediário</h3>
+            <p>
+               <li>Foque em aprender uma Linguagem e o Domínio</li>
+               <li>Banco de Dados - PHP/MySQL</li>
+               <li>Bibliotecas</li>
+               <li>Inglês </li>
+            </p>
+            <a href="#"><i class="fi fi-rr-cross-small"></i></a>
+         </div>
+      </div>
+      <div class="sl-card" id="profissional_animator">
          <img src="../src/logo/shiba/shiba_3.png" alt="">
          <div class="text">
             <h3>Desenvolvedor Avançado</h3>
@@ -463,47 +599,116 @@
       <section>
          <br>
          <br>
-      <h2>CONHEÇA OS 12 PRINCÍPIOS DA ANIMAÇÃO</h2>
-      <br>
-      <div>
-         <h3>1. Comprimir e esticar (Squash and Stretch)</h3>
-         Sem dúvida, este é o conceito mais importante. Qualquer figura viva demonstra mudanças consideráveis na sua forma ao se deslocar durante uma ação.
-         O rosto de um personagem ganha mais vida quando as formas dos olhos, bochechas e lábios mudam de forma, com a utilização do “Squash & Stretch” ( comprime e estica ).
-         Ao se usar o “Squash & Stretch”, é importante sempre manter o volume da forma.
-         <br><img src="../src/student-life/student-life-animation/squash.png">
-         <br><h3>2. Antecipação (Anticipation)</h3>
-         Quando as pessoas estão assistindo a um desenho, elas não entenderão o que está ocorrendo se não houver uma sequência de ações que levem claramente de uma atividade a outra. As pessoas devem ser preparadas para o próximo movimento e esperá-lo antes que este ocorra. Deve ocorrer uma antecipação. Como na vida real, poucos movimentos ocorrem sem antecipação. Sem ela, os movimentos não teriam força. Pense em um tenista, jogador de basebol, basquete ou futebol, todos antecipam o movimento em direção oposta antes de dar a tacada, o chute, etc.
+         <h2>CONHEÇA OS 12 PRINCÍPIOS DA ANIMAÇÃO</h2>
          <br>
-         <br><h3>3. Encenação (Staging)</h3>
-         Este princípio está baseado em apresentar uma ação de forma que fique claro visualmente para o espectador.
-         Uma ação tem bom “Staging” quando a expressão é bem vista, o movimento é claro e visível.
-         Quando você está fazendo o “Staging” de uma ação deve ter cuidado para não usar um ângulo que atrapalhe o que você quer mostrar.
-         Uma boa forma de conseguir um bom “staging” é através do uso de silhueta.
-         <br>
-         <br><h3>4. Animação direta e pose a pose (Straight Ahead Action and Pose to Pose)</h3>
-         Há dois métodos para animar uma cena, o “direto” (straight ahead) e o “pose a pose”. 
-         No método “direto” o animador desenha um movimento após o outro até o final da cena. Neste caso, a animação sai mais espontânea e a cena parece menos mecânica. Desta forma o animador não planeja exatamente como vai ser o decorrer da cena e vai inventando à medida em que progride. Este método geralmente é usado em cenas de ação, onde muitas vezes ocorrem movimentos rápidos e inesperados, embora seja preciso cuidado para que o personagem não fique fora da perspectiva ou checagem do cenário.
-         <br>
-         <br><h3>5. Continuidade e sobreposição da ação (Overlapping Action and Follow Through)</h3>
-         Quando um personagem entrava andando em cena e de repente parava completamente, a ação parecia dura e não era convincente. Foi encontrada então uma forma em que, basicamente, as partes não parassem de se movimentar todas ao mesmo tempo.
-         É o principio do “Follow Through” (movimento sequencial).
-         Se o personagem tem elementos como orelhas grandes, cauda ou casaco, estas partes continuam a se mover mesmo após a figura ter parado.
-         O movimento de cada elemento terá um tempo diferente de acordo com seu peso e características.
-         <br>
-         <br><h3>6. Aceleração e desaceleração (Slow In and Slow Out)</h3>
-         Uma vez que o animador desenhava cuidadosamente seus extremos, pensando no tempo decorrente da ação como um todo, precisava indicar ao intervalador como seriam feitos os intervalos. Usava então uma “chave de intervalação”.
-         Uma vez que o animador desenhava cuidadosamente seus extremos, pensando no tempo decorrente da ação como um todo, precisava indicar ao intervalador como seriam feitos os intervalos. Usava então uma “chave de intervalação”.
-         Através de indicações na “chave” o movimento se desenhava ao longo da animação.
-         Colocando os intervalos perto dos extremos se consegue um resultado interessante, com o personagem indo rapidamente de uma pose à outra.
+         <div>
+            <h3>1. Comprimir e esticar (Squash and Stretch)</h3>
+            Sem dúvida, este é o conceito mais importante. Qualquer figura viva demonstra mudanças consideráveis na sua forma ao se deslocar durante uma ação.
+            O rosto de um personagem ganha mais vida quando as formas dos olhos, bochechas e lábios mudam de forma, com a utilização do “Squash & Stretch” ( comprime e estica ).
+            Ao se usar o “Squash & Stretch”, é importante sempre manter o volume da forma.
+            <br><img src="../src/student-life/student-life-animation/squash.png">
+            <br>
+            <h3>2. Antecipação (Anticipation)</h3>
+            Quando as pessoas estão assistindo a um desenho, elas não entenderão o que está ocorrendo se não houver uma sequência de ações que levem claramente de uma atividade a outra. As pessoas devem ser preparadas para o próximo movimento e esperá-lo antes que este ocorra. Deve ocorrer uma antecipação. Como na vida real, poucos movimentos ocorrem sem antecipação. Sem ela, os movimentos não teriam força. Pense em um tenista, jogador de basebol, basquete ou futebol, todos antecipam o movimento em direção oposta antes de dar a tacada, o chute, etc.
+            <br>
+            <br>
+            <h3>3. Encenação (Staging)</h3>
+            Este princípio está baseado em apresentar uma ação de forma que fique claro visualmente para o espectador.
+            Uma ação tem bom “Staging” quando a expressão é bem vista, o movimento é claro e visível.
+            Quando você está fazendo o “Staging” de uma ação deve ter cuidado para não usar um ângulo que atrapalhe o que você quer mostrar.
+            Uma boa forma de conseguir um bom “staging” é através do uso de silhueta.
+            <br>
+            <br>
+            <h3>4. Animação direta e pose a pose (Straight Ahead Action and Pose to Pose)</h3>
+            Há dois métodos para animar uma cena, o “direto” (straight ahead) e o “pose a pose”.
+            No método “direto” o animador desenha um movimento após o outro até o final da cena. Neste caso, a animação sai mais espontânea e a cena parece menos mecânica. Desta forma o animador não planeja exatamente como vai ser o decorrer da cena e vai inventando à medida em que progride. Este método geralmente é usado em cenas de ação, onde muitas vezes ocorrem movimentos rápidos e inesperados, embora seja preciso cuidado para que o personagem não fique fora da perspectiva ou checagem do cenário.
+            <br>
+            <br>
+            <h3>5. Continuidade e sobreposição da ação (Overlapping Action and Follow Through)</h3>
+            Quando um personagem entrava andando em cena e de repente parava completamente, a ação parecia dura e não era convincente. Foi encontrada então uma forma em que, basicamente, as partes não parassem de se movimentar todas ao mesmo tempo.
+            É o principio do “Follow Through” (movimento sequencial).
+            Se o personagem tem elementos como orelhas grandes, cauda ou casaco, estas partes continuam a se mover mesmo após a figura ter parado.
+            O movimento de cada elemento terá um tempo diferente de acordo com seu peso e características.
+            <br>
+            <br>
+            <h3>6. Aceleração e desaceleração (Slow In and Slow Out)</h3>
+            Uma vez que o animador desenhava cuidadosamente seus extremos, pensando no tempo decorrente da ação como um todo, precisava indicar ao intervalador como seriam feitos os intervalos. Usava então uma “chave de intervalação”.
+            Uma vez que o animador desenhava cuidadosamente seus extremos, pensando no tempo decorrente da ação como um todo, precisava indicar ao intervalador como seriam feitos os intervalos. Usava então uma “chave de intervalação”.
+            Através de indicações na “chave” o movimento se desenhava ao longo da animação.
+            Colocando os intervalos perto dos extremos se consegue um resultado interessante, com o personagem indo rapidamente de uma pose à outra.
 
 
-      </div>
+         </div>
 
       </section>
    </section>
 
+   <section class="student-life hide" id="sl-photo">
+      <h2> Fotografia</h2>
+      <p style="margin:auto; text-align:center;">Em qual nível você está?</p>
+      <div class="progress-bar">
+
+         <input type="radio" name="hide" class="beg">
+         <input type="radio" name="hide" class="int">
+         <input type="radio" name="hide" class="pro">
+
+         <button class="circle nv1-circle" onclick="beginner_photo()"></button>
+         <div class="bar n1-bar"></div>
+         <button class="circle nv2-circle" onclick="intermediate_photo()"></button>
+         <div class="bar n2-bar"></div>
+         <button class="circle nv3-circle" onclick="profissional_photo()"></button>
+      </div>
+      </div>
+
+      <div class="sl-card" id="beginner_photo">
+         <img src="../src/logo/shiba/shiba_1.png" alt="">
+         <div class="text">
+            <h3>Animador Iniciante</h3>
+            <p>
+               <li>Defina seus traços</li>
+               <li>Técnica de Comprimir e esticar</li>
+               <li>Técnica de Antecipação</li>
+               <li>Técnica de Encenação</li>
+
+            </p>
+            <a href="#"><i class="fi fi-rr-cross-small"></i></a>
+         </div>
+      </div>
+      <div class="sl-card" id="intermediate_photo">
+         <img src="../src/logo/shiba/shiba_2.png" alt="">
+         <div class="text">
+            <h3>Animador Intermediário</h3>
+            <p>
+               <li>Técnica de Animação direta e pose a pose</li>
+               <li>Técnica de Continuidade e sobreposição da ação</li>
+               <li>Técnica Aceleração e desaceleração</li>
+               <li>Técnica Movimento em arco </li>
+            </p>
+            <a href="#"><i class="fi fi-rr-cross-small"></i></a>
+         </div>
+      </div>
+      <div class="sl-card" id="profissional_photo">
+         <img src="../src/logo/shiba/shiba_3.png" alt="">
+         <div class="text">
+            <h3>Animador Avançado</h3>
+            <p>
+               <li>Técnica de Ação Secundária</li>
+               <li>Princípio Temporização</li>
+               <li>Princípio Exagero</li>
+               <li>Técnica Desenho volumétrico</li>
+               <li>Trabalhar Apelo — Design Atraente</li>
+            </p>
+            <a href="#"><i class="fi fi-rr-cross-small"></i></a>
+         </div>
+      </div>
+      <section>
+         <!-- O conteúdo feito aqui será exposto mesmo pós clicar nas seleções iniciante, intermediário ou profissional -->
+      </section>
+   </section>
+
    <!-------Footer------->
-   <footer></footer><script src="../components/footer.js"></script>
+   <footer></footer>
+   <script src="../components/footer.js"></script>
    <!-------End Footer------->
 
    <script src="../script/student-life.js">

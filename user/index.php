@@ -53,16 +53,12 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
                   <a href="partners.php">{{navbar_title_2}}</a>
                   <span class="navtop-line"></span>
                   <ul>{{navbar_dropdown_title_1}}
-                     <li><a href="not-ready.php">Fórum</a></li>
+                     <li><a href="forum.php">Fórum</a></li>
                   </ul>
                </div>
             </div>
-
             <div class="nav-right">
-               <input type="search" name="navbar-search" list="pages"
-                v-bind:id="class_of_navbar_search_field" 
-                v-model="value_of_navbar_search_field"
-                v-on:keyup.enter="anything()">
+               <input type="search" name="navbar-search" list="pages" v-bind:id="class_of_navbar_search_field" v-model="value_of_navbar_search_field" v-on:keyup.enter="anything()">
                <datalist id="pages">
                   <option value="Student life"></option>
                   <option value="Sobre nós"></option>
@@ -71,15 +67,16 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
                   <option value="Políticas de privacidade e inclusão"></option>
                   <option value="Página inicial"></option>
                </datalist>
-                <i class="fi fi-rr-search" @click="show_search_field()"></i>
+               <i v-bind:class="search_icon" @click="show_search_field()"></i>
                <div class="ver-line"></div>
                <div class="nav-user" @click="onclick_dropdow()">
-                  <p onselectstart='return false'> Bem vindo! <?php echo $user->nome; ?></p>
+                  <p> Bem vindo! <?php echo $user->nome; ?></p>
+                  <div v-bind:class="class_of_dropdow_user">
+                     <a href="">Editar Perfil</a>
+                     <a href="db_engine/bd_mysql_destroy_pdo.php">Sair <i class="fi fi-rr-sign-in-alt"></i></a>
+                  </div>
                </div>
-               <div class="dropdow-user">
-                  <a href="">Editar Perfil</a>
-                  <a href="db_engine/bd_mysql_destroy_pdo.php">Sair <i class="fi fi-rr-sign-in-alt"></i></a>
-               </div>
+               
             </div>
          </div>
          <div class="nav-components-mobile">
@@ -120,7 +117,6 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
          </aside>
       </section>
    </section>
-
    <script src="../components/navbar_off_template.js"></script>
    <!-----Header----->
 
@@ -145,11 +141,11 @@ $user = $stmt1->fetch(PDO::FETCH_OBJ);
    <main>
       <div id="mid-return"></div>
 
-      <section class="student-life">
+      <section class="student-life vocational-test">
          <div class="student-life-text">
             <h2 class="title-gg">Teste vocacional</h2>
             <p>Faça um teste para saber em que você pode ser útil, caso não tenha, desista.</p>
-            <a href="student-life.php">Comece sua Jornada</a>
+            <a href="not-ready.php">Comece sua Jornada</a>
          </div>
          <img src="../src/index/icone_teste_vocacional.png" alt="icone teste vocacional">
       </section>

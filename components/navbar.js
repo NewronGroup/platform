@@ -49,16 +49,16 @@ navbar = new Vue({
                <a href="partners.php">{{navbar_title_2}}</a>
                <span class="navtop-line"></span>
                <ul>{{navbar_dropdown_title_1}}
-                  <li ><a href="not-ready.php">Fórum</a></li>
+                  <li ><a href="forum-please-login.php">Fórum</a></li>
                </ul>
             </div>
          </div>
-
+   
          <div class="nav-right">
             <input type="search" name="navbar-search" v-bind:id="class_of_navbar_search_field">
             <i class="fi fi-rr-search" @click="show_search_field()"></i>
             <div class="ver-line"></div>
-            <div class="nav-user" >
+            <div class="nav-user">
                <a href="sign-in.php" class="login">Entrar</a>
             </div>
          </div>

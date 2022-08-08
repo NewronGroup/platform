@@ -21,6 +21,7 @@ session_start();
 
 <body>
     <div class="loader"><img src="../src/logo/logo_inverted_no_content.png" alt=""></div><script src="../script/preloader.js"></script>
+    <button class="return-last-page" onclick="history.go(-1)"><i class="fi fi-rr-angle-square-left"></i></button>
     <main>
         <section class="login-area">
             <div class="texto">
